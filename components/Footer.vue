@@ -5,6 +5,7 @@
 
     <ToggleDark />
     <NuxtLink i-mdi-github to="https://github.com/a-mans/nuxt3-template" />
+    <NuxtLink i-fluent-add-12-filled to="/page" />
   </div>
 </template>
 <style scoped lang="less"></style>

@@ -7,11 +7,12 @@ type User = {
 export const useAppStore = defineStore('appStore', () => {
     const user = ref<User>()
     const token = ref<string>()
+    const dark = ref(false)
     const isLogin = computed(() => {
         return !!token.value
     })
     return {
-        user, token, isLogin
+        user, token, dark, isLogin
     }
 }, {
     persist: {
