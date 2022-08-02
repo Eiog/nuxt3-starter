@@ -4,7 +4,7 @@
     <NuxtLink i-fluent-home-28-regular to="/" />
 
     <ToggleDark />
-    <NuxtLink i-mdi-github to="/" />
+    <NuxtLink i-mdi-github to="https://github.com/a-mans/nuxt3-template" />
   </div>
 </template>
 <style scoped lang="less"></style>
