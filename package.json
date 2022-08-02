@@ -1,0 +1,25 @@
+{
+  "name": "template-nuxt3",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@css-render/vue3-ssr": "^0.15.10",
+    "@iconify-json/fluent": "^1.1.15",
+    "@iconify-json/mdi": "^1.1.29",
+    "@nuxt/content": "^2.0.1",
+    "@nuxtjs/color-mode": "^3.1.4",
+    "@pinia/nuxt": "^0.3.1",
+    "@unocss/nuxt": "^0.45.1",
+    "naive-ui": "^2.32.1",
+    "nuxt": "3.0.0-rc.6",
+    "pinia": "^2.0.17",
+    "pinia-plugin-persistedstate": "^2.0.1",
+    "unplugin-vue-components": "^0.21.2"
+  }
+}
