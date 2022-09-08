@@ -4,6 +4,7 @@
   "compilerOptions": {
     "strict": true,
     "types": [
+      "unplugin-icons/types/vue",
       "naive-ui/volar"
     ]
   }
