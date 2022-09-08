@@ -11,6 +11,9 @@
     "@css-render/vue3-ssr": "^0.15.10",
     "@iconify-json/fluent": "^1.1.15",
     "@iconify-json/mdi": "^1.1.29",
+    "@iconify-json/ri": "^1.1.3",
+    "@iconify-json/twemoji": "^1.1.5",
+    "@intlify/unplugin-vue-i18n": "^0.5.0",
     "@nuxt/content": "^2.0.1",
     "@nuxtjs/color-mode": "^3.1.4",
     "@pinia/nuxt": "^0.3.1",
@@ -22,7 +25,8 @@
     "nuxt": "3.0.0-rc.6",
     "pinia": "^2.0.17",
     "pinia-plugin-persistedstate": "^2.0.1",
-    "unplugin-vue-components": "^0.21.2"
+    "unplugin-vue-components": "^0.21.2",
+    "vue-i18n": "^9.2.2"
   },
   "dependencies": {
     "axios": "^0.27.2",

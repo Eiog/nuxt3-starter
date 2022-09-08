@@ -1,23 +1,14 @@
 import { defineStore } from 'pinia'
-type User = {
-    account: string
-    name: string
-    avatar: string
-}
 export const useAppStore = defineStore('appStore', () => {
-    const user = ref<User>()
-    const token = ref<string>()
-    const dark = ref(false)
-    const isLogin = computed(() => {
-        return !!token.value
-    })
+    const darkMode = ref(false)
+    const language = ref<'cn' | 'en'>('cn')
     return {
-        user, token, dark, isLogin
+        darkMode, language
     }
 }, {
     persist: {
         key: '__app__',
-        paths: ['user', 'token']
+        paths: ['']
     },
 
 }

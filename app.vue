@@ -1,18 +1,13 @@
 <script setup>
 useHead({
-  title: "nuxt3-template",
+  title: 'nuxt3-template',
   link: [
     {
-      rel: "icon",
-      type: "image/png",
-      href: "/nuxt.png",
+      rel: 'icon',
+      type: 'image/png',
+      href: '/nuxt.png',
     },
   ],
-});
-definePageMeta({
-  transition: {
-    name: "fade-transform",
-  },
 });
 </script>
 <template>
@@ -33,17 +28,15 @@ html.dark {
   background: #222;
   color: white;
 }
-.fade-transform-leave-active,
-.fade-transform-enter-active {
+.page-leave-active,
+.page-enter-active {
   transition: all 0.3s ease-in-out;
 }
-
-.fade-transform-enter-from {
+.page-enter-from {
   transform: scale(0.95);
   opacity: 0;
 }
-
-.fade-transform-leave-to {
+.page-leave-to {
   transform: scale(1.05);
   opacity: 0;
 }

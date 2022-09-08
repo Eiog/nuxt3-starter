@@ -25,6 +25,11 @@ export default defineNuxtConfig({
                 resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory
             }),
         ],
+        resolve: {
+            alias: {
+                'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
+            }
+        },
         ssr: {
             noExternal: ['moment', 'naive-ui', '@juggle/resize-observer', '@css-render/vue3-ssr'],
         },
