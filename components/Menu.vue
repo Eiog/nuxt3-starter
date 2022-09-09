@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
-import { useAppStore } from '~~/stores/appStore.js';
+import { useAppStore } from '~/stores/appStore.js';
 const router = useRouter();
 const { darkMode, language } = storeToRefs(useAppStore());
 

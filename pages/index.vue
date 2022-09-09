@@ -1,6 +1,6 @@
 <script setup lang="ts" name="Home">
 import { watch } from 'vue';
-import { useAppStore } from '~~/stores/appStore';
+import { useAppStore } from '~/stores/appStore';
 import { useI18n } from 'vue-i18n';
 const appStore = useAppStore();
 const { locale, t } = useI18n();
