@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { defineComponent, h } from 'vue';
 import {
-  NConfigProvider,
   NLoadingBarProvider,
   NDialogProvider,
   NNotificationProvider,
   NMessageProvider,
-  NGlobalStyle,
   darkTheme,
   GlobalTheme,
 } from 'naive-ui';
@@ -21,21 +19,19 @@ type Props = {
 };
 const props = defineProps<Props>();
 const theme = ref<GlobalTheme | undefined>(undefined);
-onMounted(() => {
-  watch(
-    () => props.dark,
-    (dark) => {
-      if (dark) {
-        theme.value = darkTheme;
-        document.body.classList.add('dark');
-        return;
-      }
-      theme.value = undefined;
-      document.body.classList.remove('dark');
-    },
-    { immediate: true },
-  );
-});
+watch(
+  () => props.dark,
+  (dark) => {
+    if (dark) {
+      theme.value = darkTheme;
+      document.body.classList.add('dark');
+      return;
+    }
+    theme.value = undefined;
+    document.body.classList.remove('dark');
+  },
+  { immediate: true },
+);
 // 挂载naive组件的方法至window, 以便在路由钩子函数和请求函数里面调用
 function registerNaiveTools() {
   window.$loadingBar = useLoadingBar();
@@ -43,12 +39,9 @@ function registerNaiveTools() {
   window.$message = useMessage();
   window.$notification = useNotification();
 }
-
 const NaiveProviderContent = defineComponent({
   setup() {
-    onMounted(() => {
-      registerNaiveTools();
-    });
+    registerNaiveTools();
   },
   render() {
     return h('div');
