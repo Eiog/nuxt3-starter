@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
 const { darkMode } = storeToRefs(useAppStore());
+const route = useRoute();
+useTitle(route.meta.title || '');
 </script>
 
 <template>
