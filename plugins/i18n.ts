@@ -1,15 +1,15 @@
 import { createI18n } from 'vue-i18n';
-import cn from '~/i18n/cn.json';
-import en from '~/i18n/en.json';
+import zh_cn from '~/i18n/cn.json';
+import en_us from '~/i18n/en.json';
 
 export default defineNuxtPlugin(({ vueApp }) => {
   const i18n = createI18n({
+    locale: 'zh_cn',
     legacy: false,
-    globalInjection: true,
-    locale: 'cn',
+    fallbackLocale: 'zh_cn',
     messages: {
-      cn,
-      en,
+      zh_cn: zh_cn,
+      en_us: en_us,
     },
   });
 
