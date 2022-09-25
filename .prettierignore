@@ -6,3 +6,5 @@ docs/
 dist/
 .vscode
 node_modules
+.nuxt
+.output
