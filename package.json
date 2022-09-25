@@ -1,8 +1,15 @@
 {
+  "name": "template-nuxt3",
   "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "author": "xsrole",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
+    "build": "nuxt build",
+    "lint": "eslint",
+    "test": "vitest",
+    "type": "vue-tsc --noEmit",
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
