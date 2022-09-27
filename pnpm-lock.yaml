@@ -20,6 +20,7 @@ specifiers:
   '@vue/test-utils': ^2.0.2
   '@vueuse/nuxt': ^9.2.0
   axios: ^0.27.2
+  colord: ^2.9.3
   crypto-js: ^4.1.1
   eslint: ^8.24.0
   eslint-plugin-prettier: ^4.2.1
@@ -42,6 +43,7 @@ specifiers:
 
 dependencies:
   axios: 0.27.2
+  colord: 2.9.3
   crypto-js: 4.1.1
   nprogress: 0.2.0
 
@@ -2717,7 +2719,6 @@ packages:
 
   /colord/2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: true
 
   /colorette/2.0.19:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}

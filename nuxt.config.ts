@@ -37,6 +37,7 @@ export default defineNuxtConfig({
           '@vueuse/core',
           'pinia',
           'vue-router',
+          'vue-i18n',
           {
             'naive-ui': [
               'useDialog',
@@ -46,7 +47,7 @@ export default defineNuxtConfig({
             ],
           },
         ],
-        dirs: ['stores'],
+        dirs: ['hooks', 'stores', 'utils'],
         dts: 'typings/auto-import.d.ts',
         eslintrc: {
           enabled: true,
