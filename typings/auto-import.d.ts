@@ -47,7 +47,7 @@ declare global {
   const getLocal: typeof import('../utils/useStorage')['getLocal']
   const getSatusColor: typeof import('../stores/helps')['getSatusColor']
   const h: typeof import('vue')['h']
-  const http: typeof import('../hooks/useHttp')['http']
+  const http: typeof import('../utils/useHttp')['http']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
   const inject: typeof import('vue')['inject']
   const isArray: typeof import('../utils/useTypeOf')['isArray']

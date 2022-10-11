@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { darkMode ,naiveThemeOverrides} = storeToRefs(useAppStore());
+const { darkMode, naiveThemeOverrides } = storeToRefs(useAppStore());
 const route = useRoute();
 useTitle(route.meta.title || '');
 </script>
