@@ -7,6 +7,7 @@ useTitle(route.meta.title || '');
 
 <template>
   <div wfull hfull>
+    <NuxtLoadingIndicator />
     <naive-provider
       :dark="darkMode"
       :theme-overrides="naiveThemeOverrides"
