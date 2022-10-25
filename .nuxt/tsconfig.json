@@ -53,13 +53,13 @@
         "public/*"
       ],
       "#app": [
-        "node_modules/.pnpm/nuxt@3.0.0-rc.11_pm2ukuskinezlvnikubdlptxf4/node_modules/nuxt/dist/app"
+        "node_modules/.pnpm/nuxt@3.0.0-rc.12_43ki6vd2si6asoadc6ixzdksmm/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "node_modules/.pnpm/nuxt@3.0.0-rc.11_pm2ukuskinezlvnikubdlptxf4/node_modules/nuxt/dist/app/*"
+        "node_modules/.pnpm/nuxt@3.0.0-rc.12_43ki6vd2si6asoadc6ixzdksmm/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "node_modules/.pnpm/nuxt@3.0.0-rc.11_pm2ukuskinezlvnikubdlptxf4/node_modules/nuxt/dist/app/compat/vue-demi"
+        "node_modules/.pnpm/nuxt@3.0.0-rc.12_43ki6vd2si6asoadc6ixzdksmm/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "pinia": [
         "node_modules/.pnpm/pinia@2.0.23_l7r24p6nevbtlimqmqcwa3ouhu/node_modules/pinia/dist/pinia"
@@ -68,10 +68,10 @@
         ".nuxt/color-mode-options"
       ],
       "#head": [
-        "node_modules/.pnpm/nuxt@3.0.0-rc.11_pm2ukuskinezlvnikubdlptxf4/node_modules/nuxt/dist/head/runtime"
+        "node_modules/.pnpm/nuxt@3.0.0-rc.12_43ki6vd2si6asoadc6ixzdksmm/node_modules/nuxt/dist/head/runtime"
       ],
       "#head/*": [
-        "node_modules/.pnpm/nuxt@3.0.0-rc.11_pm2ukuskinezlvnikubdlptxf4/node_modules/nuxt/dist/head/runtime/*"
+        "node_modules/.pnpm/nuxt@3.0.0-rc.12_43ki6vd2si6asoadc6ixzdksmm/node_modules/nuxt/dist/head/runtime/*"
       ],
       "#imports": [
         ".nuxt/imports"

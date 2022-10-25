@@ -93,6 +93,12 @@ declare module '@nuxt/schema' {
                    tr: string,
              },
 
+             anchorLinks: {
+                   depth: number,
+
+                   exclude: Array<number>,
+             },
+
              remarkPlugins: any,
 
              rehypePlugins: any,
@@ -111,10 +117,24 @@ declare module '@nuxt/schema' {
         },
 
         documentDriven: boolean,
+
+        experimental: {
+             clientDB: boolean,
+        },
     },
   }
   interface PublicRuntimeConfig {
      content: {
+        clientDB: {
+             isSPA: boolean,
+
+             integrity: any,
+        },
+
+        navigation: {
+             fields: Array<any>,
+        },
+
         base: string,
 
         tags: {
@@ -172,6 +192,12 @@ declare module '@nuxt/schema' {
         wsUrl: string,
 
         documentDriven: boolean,
+
+        anchorLinks: {
+             depth: number,
+
+             exclude: Array<number>,
+        },
     },
   }
 }
