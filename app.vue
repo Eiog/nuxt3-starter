@@ -1,13 +1,11 @@
 <script setup>
 useHead({
   title: 'nuxt3-template',
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/nuxt.png',
-    },
-  ],
+});
+onMounted(() => {
+  const meta = document.createElement('meta');
+  meta.name = 'naive-ui-style';
+  document.head.appendChild(meta);
 });
 </script>
 <template>

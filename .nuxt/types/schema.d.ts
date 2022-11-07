@@ -28,6 +28,8 @@ declare module '@nuxt/schema' {
              ws: {
                    port: number,
 
+                   hostname: string,
+
                    showURL: boolean,
              },
         },

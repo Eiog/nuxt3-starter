@@ -1,9 +1,28 @@
-import { defineNuxtConfig } from 'nuxt';
 import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import AutoImport from 'unplugin-auto-import/vite';
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  typescript: {
+    shim: false,
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/logo.png',
+        },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: '/tailwind.css',
+        },
+      ],
+    },
+  },
   modules: [
     '@nuxt/content',
     '@pinia/nuxt',
@@ -12,13 +31,21 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
   unocss: {
-    preflight: true,
+    preflight: false,
   },
   colorMode: {
     classSuffix: '',
   },
   build: {
-    transpile: ['vueuc'], // fix dev error: Cannot find module 'vueuc'
+    transpile:
+      process.env.NODE_ENV === 'production'
+        ? [
+            'naive-ui',
+            'vueuc',
+            '@css-render/vue3-ssr',
+            '@juggle/resize-observer',
+          ]
+        : ['@juggle/resize-observer'],
   },
   vite: {
     plugins: [
@@ -61,13 +88,11 @@ export default defineNuxtConfig({
         'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
       },
     },
-    ssr: {
-      noExternal: [
-        'moment',
-        'naive-ui',
-        '@juggle/resize-observer',
-        '@css-render/vue3-ssr',
-      ],
+    optimizeDeps: {
+      include:
+        process.env.NODE_ENV === 'development'
+          ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
+          : [],
     },
   },
 });

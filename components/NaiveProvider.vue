@@ -57,6 +57,7 @@ const NaiveProviderContent = defineComponent({
 <template>
   <n-config-provider
     abstract
+    inline-theme-disabled
     :theme="theme"
     :theme-overrides="props.themeOverrides"
     :locale="props.locale"

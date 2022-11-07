@@ -89,6 +89,7 @@ onMounted(() => {
         <span> 点我试试 </span>
       </n-popover>
     </div>
+    <n-button type="primary">dd</n-button>
     <div text="center">
       <h1 text="3xl dark:gray-4">
         {{ t('welcome') }}
