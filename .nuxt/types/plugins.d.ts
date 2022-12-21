@@ -6,14 +6,14 @@ type Decorate<T extends Record<string, any>> = { [K in keyof T as K extends stri
 type InjectionType<A extends Plugin> = A extends Plugin<infer T> ? Decorate<T> : unknown
 
 type NuxtAppInjections = 
+  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@pinia+nuxt@0.4.6_rnb65zy77kx66qnsvrpa2qz65q/node_modules/@pinia/nuxt/dist/runtime/plugin.vue3").default> &
   InjectionType<typeof import("../components.plugin").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/pages/runtime/router").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@nuxtjs+color-mode@3.1.8_rollup@2.79.1/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.server").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@nuxtjs+color-mode@3.1.8_rollup@2.79.1/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.client").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/pages/runtime/router").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@nuxtjs+color-mode@3.2.0_rollup@2.79.1/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.server").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@nuxtjs+color-mode@3.2.0_rollup@2.79.1/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.client").default> &
   InjectionType<typeof import("../unocss").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@pinia+nuxt@0.4.4_x2lopl6dvitdigtxz72gjjdrx4/node_modules/@pinia/nuxt/dist/runtime/plugin.vue3").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.2.2_rollup@2.79.1/node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.3.0_rollup@2.79.1/node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
   InjectionType<typeof import("../../plugins/i18n").default> &
   InjectionType<typeof import("../../plugins/naive-ui").default> &
   InjectionType<typeof import("../../plugins/piniaPluginPersistedstate.client").default>

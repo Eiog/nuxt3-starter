@@ -53,25 +53,25 @@
         "public/*"
       ],
       "#app": [
-        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/app"
+        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/app/*"
+        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/app/compat/vue-demi"
+        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "pinia": [
-        "node_modules/.pnpm/registry.npmmirror.com+pinia@2.0.24_mgnvym7yiazkylwwogi5r767ue/node_modules/pinia/dist/pinia"
+        "node_modules/.pnpm/registry.npmmirror.com+pinia@2.0.28_prq2uz4lho2pwp6irk4cfkrxwu/node_modules/pinia/dist/pinia"
       ],
       "#color-mode-options": [
         ".nuxt/color-mode-options"
       ],
       "#head": [
-        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/head/runtime"
+        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/head/runtime"
       ],
       "#head/*": [
-        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_mzquuutm2auzin3v6b3mmu2eea/node_modules/nuxt/dist/head/runtime/*"
+        "node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/head/runtime/*"
       ],
       "#imports": [
         ".nuxt/imports"

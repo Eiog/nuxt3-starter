@@ -7,199 +7,217 @@ declare module '@nuxt/schema' {
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
   }
   interface RuntimeConfig {
-     app: {
-        baseURL: string,
+   app: {
+      baseURL: string,
 
-        buildAssetsDir: string,
+      buildAssetsDir: string,
 
-        cdnURL: string,
-    },
+      cdnURL: string,
+   },
 
-    content: {
-        cacheVersion: number,
+   content: {
+      cacheVersion: number,
 
-        cacheIntegrity: string,
+      cacheIntegrity: string,
 
-        transformers: Array<any>,
+      transformers: Array<any>,
 
-        base: string,
+      base: string,
 
-        watch: {
-             ws: {
-                   port: number,
+      api: {
+         baseURL: string,
+      },
 
-                   hostname: string,
+      watch: {
+         ws: {
+            port: {
+               port: number,
 
-                   showURL: boolean,
-             },
-        },
+               portRange: Array<number>,
+            },
 
-        sources: any,
+            hostname: string,
 
-        ignores: Array<string>,
+            showURL: boolean,
+         },
+      },
 
-        locales: Array<any>,
+      sources: any,
 
-        defaultLocale: any,
+      ignores: Array<string>,
 
-        highlight: boolean,
+      locales: Array<any>,
 
-        markdown: {
-             tags: {
-                   p: string,
+      defaultLocale: any,
 
-                   a: string,
+      highlight: boolean,
 
-                   blockquote: string,
+      markdown: {
+         tags: {
+            p: string,
 
-                   "code-inline": string,
+            a: string,
 
-                   code: string,
+            blockquote: string,
 
-                   em: string,
+            "code-inline": string,
 
-                   h1: string,
+            code: string,
 
-                   h2: string,
+            em: string,
 
-                   h3: string,
+            h1: string,
 
-                   h4: string,
+            h2: string,
 
-                   h5: string,
+            h3: string,
 
-                   h6: string,
+            h4: string,
 
-                   hr: string,
+            h5: string,
 
-                   img: string,
+            h6: string,
 
-                   ul: string,
+            hr: string,
 
-                   ol: string,
+            img: string,
 
-                   li: string,
+            ul: string,
 
-                   strong: string,
+            ol: string,
 
-                   table: string,
+            li: string,
 
-                   thead: string,
+            strong: string,
 
-                   tbody: string,
+            table: string,
 
-                   td: string,
+            thead: string,
 
-                   th: string,
+            tbody: string,
 
-                   tr: string,
-             },
+            td: string,
 
-             anchorLinks: {
-                   depth: number,
+            th: string,
 
-                   exclude: Array<number>,
-             },
+            tr: string,
+         },
 
-             remarkPlugins: any,
+         anchorLinks: {
+            depth: number,
 
-             rehypePlugins: any,
-        },
+            exclude: Array<number>,
+         },
 
-        yaml: any,
+         remarkPlugins: any,
 
-        csv: {
-             delimeter: string,
+         rehypePlugins: any,
+      },
 
-             json: boolean,
-        },
+      yaml: any,
 
-        navigation: {
-             fields: Array<any>,
-        },
+      csv: {
+         delimeter: string,
 
-        documentDriven: boolean,
+         json: boolean,
+      },
 
-        experimental: {
-             clientDB: boolean,
-        },
-    },
+      navigation: {
+         fields: Array<any>,
+      },
+
+      documentDriven: boolean,
+
+      experimental: {
+         clientDB: boolean,
+
+         stripQueryParameters: boolean,
+      },
+   },
   }
   interface PublicRuntimeConfig {
-     content: {
-        clientDB: {
-             isSPA: boolean,
+   content: {
+      locales: Array<any>,
 
-             integrity: any,
-        },
+      defaultLocale: any,
 
-        navigation: {
-             fields: Array<any>,
-        },
+      integrity: any,
 
-        base: string,
+      experimental: {
+         stripQueryParameters: boolean,
 
-        tags: {
-             p: string,
+         clientDB: boolean,
+      },
 
-             a: string,
+      api: {
+         baseURL: string,
+      },
 
-             blockquote: string,
+      navigation: {
+         fields: Array<any>,
+      },
 
-             "code-inline": string,
+      tags: {
+         p: string,
 
-             code: string,
+         a: string,
 
-             em: string,
+         blockquote: string,
 
-             h1: string,
+         "code-inline": string,
 
-             h2: string,
+         code: string,
 
-             h3: string,
+         em: string,
 
-             h4: string,
+         h1: string,
 
-             h5: string,
+         h2: string,
 
-             h6: string,
+         h3: string,
 
-             hr: string,
+         h4: string,
 
-             img: string,
+         h5: string,
 
-             ul: string,
+         h6: string,
 
-             ol: string,
+         hr: string,
 
-             li: string,
+         img: string,
 
-             strong: string,
+         ul: string,
 
-             table: string,
+         ol: string,
 
-             thead: string,
+         li: string,
 
-             tbody: string,
+         strong: string,
 
-             td: string,
+         table: string,
 
-             th: string,
+         thead: string,
 
-             tr: string,
-        },
+         tbody: string,
 
-        highlight: boolean,
+         td: string,
 
-        wsUrl: string,
+         th: string,
 
-        documentDriven: boolean,
+         tr: string,
+      },
 
-        anchorLinks: {
-             depth: number,
+      highlight: boolean,
 
-             exclude: Array<number>,
-        },
-    },
+      wsUrl: string,
+
+      documentDriven: boolean,
+
+      anchorLinks: {
+         depth: number,
+
+         exclude: Array<number>,
+      },
+   },
   }
 }
