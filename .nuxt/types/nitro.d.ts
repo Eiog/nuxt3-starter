@@ -2,7 +2,7 @@
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
-    '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
+    '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_ohvbinqol22inb73dp6o4jtbea/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
     '/api/_content/query/:qid/**:params': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.3.0_rollup@2.79.1/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
     '/api/_content/query/:qid': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.3.0_rollup@2.79.1/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
     '/api/_content/query': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.3.0_rollup@2.79.1/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>

@@ -18,4 +18,4 @@ export { withContentBase, useUnwrap, useContentDisabled as useContentState, useC
 export { fetchContentNavigation } from '../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.3.0_rollup@2.79.1/node_modules/@nuxt/content/dist/runtime/composables/navigation';
 export { usePinia } from '../node_modules/.pnpm/registry.npmmirror.com+@pinia+nuxt@0.4.6_rnb65zy77kx66qnsvrpa2qz65q/node_modules/@pinia/nuxt/dist/runtime/composables';
 export { useColorMode } from '../node_modules/.pnpm/registry.npmmirror.com+@nuxtjs+color-mode@3.2.0_rollup@2.79.1/node_modules/@nuxtjs/color-mode/dist/runtime/composables';
-export { definePageMeta } from '../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_sx6ar3c6qkfwnpeonny6n4zhru/node_modules/nuxt/dist/pages/runtime/composables';
+export { definePageMeta } from '../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.0.0_ohvbinqol22inb73dp6o4jtbea/node_modules/nuxt/dist/pages/runtime/composables';
