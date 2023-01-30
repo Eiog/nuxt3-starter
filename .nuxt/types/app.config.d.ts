@@ -1,6 +1,6 @@
 
 import type { Defu } from 'defu'
-import cfg0 from "C:/Users/caobo/Desktop/Project/template-nuxt3/app.config"
+import cfg0 from "C:/Users/caobo/Desktop/Project/nuxt3-starter/app.config"
 
 declare const inlineConfig = {}
 type ResolvedAppConfig = Defu<typeof inlineConfig, [typeof cfg0]>
