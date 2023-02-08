@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { useDarkMode, naiveThemeOverrides, naiveLocale, naiveDateLocale } =
-  storeToRefs(useAppStore());
-const route = useRoute();
-useTitle(route.meta.title || '');
+const { useDarkMode, naiveThemeOverrides, naiveLocale, naiveDateLocale }
+  = storeToRefs(useAppStore())
+const route = useRoute()
+useTitle(route.meta.title || '')
 </script>
 
 <template>

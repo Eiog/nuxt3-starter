@@ -6,7 +6,7 @@ declare module 'nitropack' {
       'default': Awaited<ReturnType<typeof import('../../server/api/index').default>>
     }
     '/__nuxt_error': {
-      'default': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.1.2_cab3impcqxtipalk2iji3llqnm/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
+      'default': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.1.2_czv7u6ss4b3sxz62ydc6qo4idu/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
     }
     '/api/_content/query/:qid/**:params': {
       'get': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+content@2.4.3/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
@@ -32,8 +32,8 @@ declare module 'nitropack' {
   }
 }
 declare global {
-  const __buildAssetsURL: typeof import('C:/Users/PC/Desktop/Projects/nuxt3-starter/node_modules/.pnpm/registry.npmmirror.com+nuxt@3.1.2_cab3impcqxtipalk2iji3llqnm/node_modules/nuxt/dist/core/runtime/nitro/paths')['buildAssetsURL']
-  const __publicAssetsURL: typeof import('C:/Users/PC/Desktop/Projects/nuxt3-starter/node_modules/.pnpm/registry.npmmirror.com+nuxt@3.1.2_cab3impcqxtipalk2iji3llqnm/node_modules/nuxt/dist/core/runtime/nitro/paths')['publicAssetsURL']
+  const __buildAssetsURL: typeof import('C:/Users/PC/Desktop/Projects/nuxt3-starter/node_modules/.pnpm/registry.npmmirror.com+nuxt@3.1.2_czv7u6ss4b3sxz62ydc6qo4idu/node_modules/nuxt/dist/core/runtime/nitro/paths')['buildAssetsURL']
+  const __publicAssetsURL: typeof import('C:/Users/PC/Desktop/Projects/nuxt3-starter/node_modules/.pnpm/registry.npmmirror.com+nuxt@3.1.2_czv7u6ss4b3sxz62ydc6qo4idu/node_modules/nuxt/dist/core/runtime/nitro/paths')['publicAssetsURL']
   const appendHeader: typeof import('h3')['appendHeader']
   const appendHeaders: typeof import('h3')['appendHeaders']
   const appendResponseHeader: typeof import('h3')['appendResponseHeader']

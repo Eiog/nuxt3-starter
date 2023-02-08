@@ -111,23 +111,25 @@ const list = ref([
   '🙀',
   '😿',
   '😾',
-]);
+])
 const handleAdd = () => {
-  const i = Math.round(Math.random() * list.value.length);
+  const i = Math.round(Math.random() * list.value.length)
   list.value.splice(
     i,
     0,
     list.value[Math.round(Math.random() * list.value.length)],
-  );
-};
+  )
+}
 const handleRemove = (index: number) => {
-  list.value.splice(index, 1);
-};
+  list.value.splice(index, 1)
+}
 </script>
+
 <template>
   <div wfull>
     <TransitionGroup relative flex="~ wrap" tag="div" name="fade">
       <div
+        key="add"
         w10
         h10
         rounded-full
@@ -137,12 +139,13 @@ const handleRemove = (index: number) => {
         text-2xl
         relative
         bg="white hover:gray2"
-        key="add"
         @click="handleAdd"
       >
-        <i i-ri-add-fill></i>
+        <i i-ri-add-fill />
       </div>
       <div
+        v-for="(item, index) in list"
+        :key="item"
         w10
         h10
         rounded-full
@@ -152,8 +155,6 @@ const handleRemove = (index: number) => {
         text-2xl
         relative
         bg="white hover:gray2"
-        v-for="(item, index) in list"
-        :key="item"
       >
         <div
           absolute
@@ -165,13 +166,14 @@ const handleRemove = (index: number) => {
           hover="opacity100"
           @click="handleRemove(index)"
         >
-          <i i-ri-close-fill></i>
+          <i i-ri-close-fill />
         </div>
         {{ item }}
       </div>
     </TransitionGroup>
   </div>
 </template>
+
 <style scoped lang="less">
 .fade-move,
 .fade-enter-active,

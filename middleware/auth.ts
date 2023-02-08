@@ -1,3 +1,3 @@
-import { defineNuxtRouteMiddleware, navigateTo } from '#app';
+import { defineNuxtRouteMiddleware } from '#app'
 
-export default defineNuxtRouteMiddleware((to, form) => {});
+export default defineNuxtRouteMiddleware(() => {})

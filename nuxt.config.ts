@@ -1,6 +1,6 @@
-import Components from 'unplugin-vue-components/vite';
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
-import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import AutoImport from 'unplugin-auto-import/vite'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   typescript: {
@@ -50,6 +50,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       Components({
+        dirs: ['components', 'layouts'],
+        extensions: ['vue', 'md'],
+        deep: true,
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        dts: 'typings/components.d.ts',
         resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory
       }),
       AutoImport({
@@ -62,6 +67,7 @@ export default defineNuxtConfig({
         imports: [
           'vue',
           '@vueuse/core',
+          '@vueuse/head',
           'pinia',
           'vue-router',
           'vue-i18n',
@@ -74,13 +80,9 @@ export default defineNuxtConfig({
             ],
           },
         ],
-        dirs: ['hooks', 'stores', 'utils'],
+        dirs: ['hooks', 'composables', 'stores', 'utils'],
         dts: 'typings/auto-import.d.ts',
-        eslintrc: {
-          enabled: true,
-          filepath: './.eslintrc-auto-import.json',
-          globalsPropValue: true,
-        },
+        vueTemplate: true,
       }),
     ],
     resolve: {
@@ -95,4 +97,4 @@ export default defineNuxtConfig({
           : [],
     },
   },
-});
+})

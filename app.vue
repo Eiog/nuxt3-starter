@@ -1,18 +1,20 @@
 <script setup>
 useHead({
   title: 'nuxt3-template',
-});
+})
 onMounted(() => {
-  const meta = document.createElement('meta');
-  meta.name = 'naive-ui-style';
-  document.head.appendChild(meta);
-});
+  const meta = document.createElement('meta')
+  meta.name = 'naive-ui-style'
+  document.head.appendChild(meta)
+})
 </script>
+
 <template>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>
+
 <style>
 html,
 body,

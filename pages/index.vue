@@ -1,8 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
   title: '首页',
-});
-const { t } = useI18n();
+})
+const { t } = useI18n()
 
 const urls = [
   {
@@ -45,14 +45,14 @@ const urls = [
     title: 'VueUse',
     url: 'https://vueuse.org/',
   },
-];
-const count = ref(0);
-const show = ref(false);
+]
+const count = ref(0)
+const show = ref(false)
 onMounted(() => {
   setTimeout(() => {
-    show.value = true;
-  }, 2000);
-});
+    show.value = true
+  }, 2000)
+})
 </script>
 
 <template>
@@ -84,32 +84,36 @@ onMounted(() => {
                 show = false;
               }
             "
-          ></i>
+          />
         </template>
         <span> 点我试试 </span>
       </n-popover>
     </div>
-    <n-button type="primary">dd</n-button>
+    <n-button type="primary">
+      dd
+    </n-button>
     <div text="center">
       <h1 text="3xl dark:gray-4">
         {{ t('welcome') }}
       </h1>
-      <h1 text="3xl dark:gray-4">{{ t('hello') }}</h1>
+      <h1 text="3xl dark:gray-4">
+        {{ t('hello') }}
+      </h1>
     </div>
     <div flex-center flex="wrap" gap3>
       <a
-        transition-colors
         v-for="(item, index) in urls"
         :key="index"
+        transition-colors
         :href="item.url"
         target="_blank"
         rel="noopener noreferrer"
         class=""
-        >{{ item.title }}</a
-      >
+      >{{ item.title }}</a>
     </div>
   </div>
 </template>
+
 <style scoped lang="less">
 a {
   @apply text-purple-5 no-underline hover:text-purple-3;
