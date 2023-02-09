@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
+    ['unplugin-icons/nuxt', { compiler: 'vue3' }],
   ],
   unocss: {
     preflight: false,
@@ -50,10 +51,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       Components({
-        dirs: ['components', 'layouts'],
-        extensions: ['vue', 'md'],
-        deep: true,
-        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dts: 'typings/components.d.ts',
         resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory
       }),
