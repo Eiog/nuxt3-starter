@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
     ['unplugin-icons/nuxt', { compiler: 'vue3' }],
+    '@nuxt/devtools',
   ],
   unocss: {
     preflight: false,
