@@ -1,13 +1,18 @@
-import { NuxtModule } from '@nuxt/schema'
-declare module '@nuxt/schema' {
+import { NuxtModule } from 'nuxt/schema'
+declare module 'nuxt/schema' {
   interface NuxtConfig {
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["pinia"]?: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["piniaPersistedstate"]?: typeof import("@pinia-plugin-persistedstate/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["colorMode"]?: typeof import("@nuxtjs/color-mode").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["pwa"]?: typeof import("@vite-pwa/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["nuxt:vitest:mock-transform"]?: typeof import("nuxt:vitest:mock-transform").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["vitest-env"]?: typeof import("vitest-environment-nuxt/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["vitest"]?: typeof import("nuxt-vitest").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["nuxt-config-schema"]?: typeof import("nuxt-config-schema").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@nuxt/content", NuxtConfig["content"]] | ["@pinia/nuxt", NuxtConfig["pinia"]] | ["@nuxtjs/color-mode", NuxtConfig["colorMode"]] | ["@nuxt/devtools", NuxtConfig["devtools"]] | ["nuxt-config-schema", NuxtConfig["nuxt-config-schema"]] | ["@nuxt/telemetry", NuxtConfig["telemetry"]])[],
+    modules?: (NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@nuxt/content", NuxtConfig["content"]] | ["@pinia/nuxt", NuxtConfig["pinia"]] | ["@pinia-plugin-persistedstate/nuxt", NuxtConfig["piniaPersistedstate"]] | ["@nuxtjs/color-mode", NuxtConfig["colorMode"]] | ["@nuxt/devtools", NuxtConfig["devtools"]] | ["@vite-pwa/nuxt", NuxtConfig["pwa"]] | ["nuxt:vitest:mock-transform", NuxtConfig["nuxt:vitest:mock-transform"]] | ["vitest-environment-nuxt/module", NuxtConfig["vitest-env"]] | ["nuxt-vitest", NuxtConfig["vitest"]] | ["nuxt-config-schema", NuxtConfig["nuxt-config-schema"]] | ["@nuxt/telemetry", NuxtConfig["telemetry"]])[],
   }
   interface RuntimeConfig {
    app: {

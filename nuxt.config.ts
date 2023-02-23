@@ -26,17 +26,23 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
     ['unplugin-icons/nuxt', { compiler: 'vue3' }],
     '@nuxt/devtools',
+    '@vite-pwa/nuxt',
+    'nuxt-vitest',
   ],
   unocss: {
     preflight: false,
   },
   colorMode: {
     classSuffix: '',
+  },
+  pwa: {
+
   },
   build: {
     transpile:

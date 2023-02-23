@@ -11,6 +11,6 @@ dist
 dist-ssr
 *.local
 .output
-.nuxt*
+.nuxt
 src/typings/auto-import.d.ts
 src/typings/components.d.ts
