@@ -35,6 +35,9 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     'nuxt-vitest',
   ],
+  serverHandlers: [
+
+  ],
   unocss: {
     preflight: false,
   },

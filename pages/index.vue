@@ -53,6 +53,7 @@ onMounted(() => {
     show.value = true
   }, 2000)
 })
+const data = useLazyFetch('/api')
 </script>
 
 <template>
