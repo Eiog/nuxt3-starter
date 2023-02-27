@@ -1,6 +1,8 @@
+import { resolve } from 'path'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { appDescription } from './constants/index'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -40,6 +42,7 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@vite-pwa/nuxt',
     'nuxt-vitest',
+    'nuxt-icon',
   ],
   serverHandlers: [
 
@@ -66,6 +69,10 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [
+      createSvgIconsPlugin({
+        iconDirs: [resolve(process.cwd(), 'assets/icons')],
+        symbolId: 'icon-[dir]-[name]',
+      }),
       Components({
         dts: 'typings/components.d.ts',
         resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory

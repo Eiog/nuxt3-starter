@@ -23,7 +23,8 @@
 
     "types": [
       "naive-ui/volar",
-      "vitest/globals"
+      "vitest/globals",
+      "vite-plugin-svg-icons/client"
     ]
   }
 }
