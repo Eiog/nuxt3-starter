@@ -55,6 +55,7 @@ declare global {
   const inject: typeof import('vue')['inject']
   const isArray: typeof import('../utils/useTypeOf')['isArray']
   const isBoolean: typeof import('../utils/useTypeOf')['isBoolean']
+  const isDark: typeof import('../composables/dark')['isDark']
   const isDate: typeof import('../utils/useTypeOf')['isDate']
   const isDefined: typeof import('@vueuse/core')['isDefined']
   const isFile: typeof import('../utils/useTypeOf')['isFile']
@@ -99,6 +100,7 @@ declare global {
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
   const pausableWatch: typeof import('@vueuse/core')['pausableWatch']
+  const preferredDark: typeof import('../composables/dark')['preferredDark']
   const provide: typeof import('vue')['provide']
   const reactify: typeof import('@vueuse/core')['reactify']
   const reactifyObject: typeof import('@vueuse/core')['reactifyObject']
@@ -133,6 +135,7 @@ declare global {
   const toReactive: typeof import('@vueuse/core')['toReactive']
   const toRef: typeof import('vue')['toRef']
   const toRefs: typeof import('vue')['toRefs']
+  const toggleDark: typeof import('../composables/dark')['toggleDark']
   const triggerRef: typeof import('vue')['triggerRef']
   const tryOnBeforeMount: typeof import('@vueuse/core')['tryOnBeforeMount']
   const tryOnBeforeUnmount: typeof import('@vueuse/core')['tryOnBeforeUnmount']
@@ -386,6 +389,7 @@ declare module 'vue' {
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isArray: UnwrapRef<typeof import('../utils/useTypeOf')['isArray']>
     readonly isBoolean: UnwrapRef<typeof import('../utils/useTypeOf')['isBoolean']>
+    readonly isDark: UnwrapRef<typeof import('../composables/dark')['isDark']>
     readonly isDate: UnwrapRef<typeof import('../utils/useTypeOf')['isDate']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
     readonly isFile: UnwrapRef<typeof import('../utils/useTypeOf')['isFile']>
@@ -430,6 +434,7 @@ declare module 'vue' {
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
     readonly pausableWatch: UnwrapRef<typeof import('@vueuse/core')['pausableWatch']>
+    readonly preferredDark: UnwrapRef<typeof import('../composables/dark')['preferredDark']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly reactify: UnwrapRef<typeof import('@vueuse/core')['reactify']>
     readonly reactifyObject: UnwrapRef<typeof import('@vueuse/core')['reactifyObject']>
@@ -464,6 +469,7 @@ declare module 'vue' {
     readonly toReactive: UnwrapRef<typeof import('@vueuse/core')['toReactive']>
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
+    readonly toggleDark: UnwrapRef<typeof import('../composables/dark')['toggleDark']>
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly tryOnBeforeMount: UnwrapRef<typeof import('@vueuse/core')['tryOnBeforeMount']>
     readonly tryOnBeforeUnmount: UnwrapRef<typeof import('@vueuse/core')['tryOnBeforeUnmount']>
