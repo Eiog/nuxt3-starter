@@ -22,9 +22,12 @@
     "forceConsistentCasingInFileNames": true, //禁止对同一个文件的不一致的引用
 
     "types": [
+      "unplugin-icons/types/vue",
       "naive-ui/volar",
       "vitest/globals",
-      "vite-plugin-svg-icons/client"
+      "vite-plugin-svg-icons/client",
+      "@intlify/unplugin-vue-i18n/messages"
+
     ]
   }
 }

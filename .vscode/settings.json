@@ -4,7 +4,7 @@
     "i18n",
     "locales"
   ],
-  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.sourceLanguage": "zh_cn",
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sortKeys": true,
   "editor.formatOnSave": false, // 保存代码时自动格式化

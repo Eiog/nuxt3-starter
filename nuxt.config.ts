@@ -1,9 +1,12 @@
-import { resolve } from 'path'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { appDescription } from './constants/index'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   typescript: {
@@ -104,10 +107,16 @@ export default defineNuxtConfig({
         dts: 'typings/auto-import.d.ts',
         vueTemplate: true,
       }),
+      VueI18nPlugin({
+        runtimeOnly: true,
+        compositionOnly: true,
+        fullInstall: true,
+        include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**'),
+      }),
     ],
     resolve: {
       alias: {
-        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
       },
     },
     optimizeDeps: {
