@@ -50,7 +50,6 @@ onMounted(() => {
     show.value = true
   }, 2000)
 })
-const data = useLazyFetch('/api')
 </script>
 
 <template>
@@ -76,6 +75,7 @@ const data = useLazyFetch('/api')
             text="9xl"
             cursor-pointer
             outline-transparent
+            animated="~ bounce infinite"
             @click="
               () => {
                 count++;
