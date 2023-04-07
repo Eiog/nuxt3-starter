@@ -38,6 +38,8 @@ export default defineNuxtConfig({
     'nuxt-vitest',
     'nuxt-icon',
     'nuxt-icons',
+    'nuxt-security',
+    'nuxt-typed-router',
     '@nuxt/content',
     '@nuxt/devtools',
     '@nuxtjs/html-validator',
