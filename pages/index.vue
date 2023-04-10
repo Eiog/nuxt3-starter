@@ -5,7 +5,10 @@ definePageMeta({
 </script>
 
 <template>
-  <Hello />
+  <div flex-col-center>
+    <Hello />
+    <HelloTsx />
+  </div>
 </template>
 
 <style scoped lang='less'>
