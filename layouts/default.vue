@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { useDarkMode, naiveThemeOverrides, naiveLocale, naiveDateLocale }
+const { naiveThemeMode, naiveThemeOverrides, naiveLocale, naiveDateLocale }
   = storeToRefs(useAppStore())
 const route = useRoute()
 useTitle(route.meta.title || '')
@@ -9,7 +9,7 @@ useTitle(route.meta.title || '')
   <div wfull hfull>
     <NuxtLoadingIndicator />
     <naive-provider
-      :dark="useDarkMode"
+      :theme="naiveThemeMode"
       :theme-overrides="naiveThemeOverrides"
       :locale="naiveLocale"
       :date-locale="naiveDateLocale"
