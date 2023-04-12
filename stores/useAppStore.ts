@@ -10,6 +10,7 @@ import {
   zhCN,
 } from 'naive-ui'
 import { getSatusColor } from './helps'
+
 export const useAppStore = defineStore(
   'appStore',
   () => {
@@ -28,14 +29,12 @@ export const useAppStore = defineStore(
       error: '#f43f5e',
     })
     const naiveThemeMode = computed(() => {
-      darkMode.value
-        ? document.body.classList.add('dark')
-        : document.body.classList.remove('dark')
       return darkMode.value ? darkTheme : undefined
     })
     const naiveThemeOverrides: Ref<GlobalThemeOverrides> = computed(() => {
       return {
         common: {
+          bodyColor: useDarkMode.value ? '#1f1f1f' : '#f5f5f5',
           primaryColor: themeColor.value.primary,
           primaryColorHover: getSatusColor(themeColor.value.primary).hover,
           primaryColorPressed: getSatusColor(themeColor.value.primary).pressed,
