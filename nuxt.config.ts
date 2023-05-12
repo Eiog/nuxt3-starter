@@ -7,19 +7,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { appDescription } from './constants/index'
 
-function envAdapter() {
-  if (process.env.OUTPUT === 'vercel') {
-    return vercel()
-  }
-  else if (process.env.OUTPUT === 'netlify') {
-    return netlify()
-  }
-  else {
-    return node({
-      mode: 'standalone',
-    })
-  }
-}
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   typescript: {
