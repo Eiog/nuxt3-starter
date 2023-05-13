@@ -5,7 +5,7 @@ import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import { appDescription } from './constants/index'
+import { appDescription, appName } from './constants/index'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -36,13 +36,12 @@ export default defineNuxtConfig({
   },
   modules: [
     'nuxt-vitest',
-    'nuxt-icon',
-    'nuxt-icons',
-    'nuxt-security',
-    'nuxt-typed-router',
+    // 'nuxt-icon',
+    // 'nuxt-icons',
+    // 'nuxt-security',
+    // 'nuxt-typed-router',
     '@nuxt/content',
     '@nuxt/devtools',
-    '@nuxtjs/html-validator',
     '@nuxtjs/color-mode',
     '@nuxtjs/robots',
     '@pinia/nuxt',
@@ -52,6 +51,10 @@ export default defineNuxtConfig({
     ['unplugin-icons/nuxt', { compiler: 'vue3' }],
     '@vite-pwa/nuxt',
     '@morev/vue-transitions/nuxt',
+    ['unplugin-vue-inspector/nuxt', {
+      enabled: true,
+      toggleButtonVisibility: 'always',
+    }],
   ],
   serverHandlers: [
 
@@ -65,8 +68,9 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Nuxt Vite PWA',
-      short_name: 'NuxtVitePWA',
+      name: appName,
+      short_name: appName,
+      description: appDescription,
       theme_color: '#ffffff',
       icons: [
         {
@@ -89,14 +93,48 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
+      navigateFallbackDenylist: [/^\/api\//],
       globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+      cleanupOutdatedCaches: true,
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/fonts.googleapis.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'google-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          },
+        },
+        {
+          urlPattern: /^https:\/\/fonts.gstatic.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'gstatic-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          },
+        },
+      ],
     },
-    client: {
-      installPrompt: true,
-      // you don't need to include this: only for testing purposes
-      // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
-      periodicSyncForUpdates: 20,
-    },
+    registerWebManifestInRouteRules: true,
+    writePlugin: true,
+    // client: {
+    //   installPrompt: true,
+    //   // you don't need to include this: only for testing purposes
+    //   // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
+    //   periodicSyncForUpdates: 20,
+    // },
     devOptions: {
       enabled: true,
       type: 'module',
