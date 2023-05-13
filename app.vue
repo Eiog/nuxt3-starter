@@ -2,6 +2,7 @@
 useHead({
   title: 'nuxt3-template',
 })
+
 onMounted(() => {
   const meta = document.createElement('meta')
   meta.name = 'naive-ui-style'

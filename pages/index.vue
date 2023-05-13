@@ -2,6 +2,7 @@
 definePageMeta({
   title: '首页',
 })
+const { data, pending, error, refresh } = await useFetch('/api/hello')
 </script>
 
 <template>
