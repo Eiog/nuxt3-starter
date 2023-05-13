@@ -131,11 +131,9 @@ export default defineNuxtConfig({
           /\.vue\?vue/, // .vue
         ],
         imports: [
-          'vue',
           '@vueuse/core',
           '@vueuse/head',
           'pinia',
-          'vue-router',
           'vue-i18n',
           {
             'naive-ui': [
@@ -146,7 +144,7 @@ export default defineNuxtConfig({
             ],
           },
         ],
-        dirs: ['hooks', 'composables', 'stores', 'utils'],
+        dirs: ['stores'],
         dts: 'typings/auto-import.d.ts',
         vueTemplate: true,
       }),
