@@ -2,7 +2,6 @@
 const { naiveThemeMode, naiveThemeOverrides, naiveLocale, naiveDateLocale }
   = storeToRefs(useAppStore())
 const route = useRoute()
-useTitle(route.meta.title || '')
 </script>
 
 <template>

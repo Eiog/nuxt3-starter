@@ -56,9 +56,6 @@ export default defineNuxtConfig({
       toggleButtonVisibility: 'always',
     }],
   ],
-  serverHandlers: [
-
-  ],
   unocss: {
     preflight: false,
   },
@@ -169,8 +166,6 @@ export default defineNuxtConfig({
           /\.vue\?vue/, // .vue
         ],
         imports: [
-          '@vueuse/core',
-          '@vueuse/head',
           'pinia',
           'vue-i18n',
           {

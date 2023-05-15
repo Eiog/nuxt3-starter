@@ -1,14 +1,15 @@
 <script setup lang='ts'>
-definePageMeta({
-  title: '首页',
-})
-const { data, pending, error, refresh } = await useFetch('/api/hello')
+// definePageMeta({
+//   title: '首页',
+// })
+const { data, pending } = await useFetch('/api/info')
 </script>
 
 <template>
   <div flex-col-center>
     <Hello />
     <HelloTsx />
+    {{ data }}{{ pending }}
   </div>
 </template>
 
