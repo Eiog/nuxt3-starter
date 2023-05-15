@@ -56,6 +56,16 @@ export default defineNuxtConfig({
       toggleButtonVisibility: 'always',
     }],
   ],
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+    prerender: {
+      routes: ['/', '/about'],
+    },
+  },
   unocss: {
     preflight: false,
   },
