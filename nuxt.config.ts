@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     // 'nuxt-icons',
     // 'nuxt-security',
     // 'nuxt-typed-router',
-    '@nuxt/content',
+    // '@nuxt/content',
     '@nuxt/devtools',
     '@nuxtjs/color-mode',
     '@nuxtjs/robots',
