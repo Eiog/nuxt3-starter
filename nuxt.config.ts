@@ -1,10 +1,8 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { appDescription, appName } from './constants/index'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -44,6 +42,7 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxtjs/color-mode',
     '@nuxtjs/robots',
+    '@intlify/nuxt3',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@unocss/nuxt',
@@ -61,6 +60,15 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
+  },
+  intlify: {
+    localeDir: 'locales',
+    vueI18n: {
+      // You can setting same `createI18n` options here !
+      locale: 'zh_cn',
+      legacy: false,
+      fallbackLocale: 'zh_cn',
+    },
   },
   pwa: {
     registerType: 'autoUpdate',
@@ -181,16 +189,16 @@ export default defineNuxtConfig({
         dts: 'typings/auto-import.d.ts',
         vueTemplate: true,
       }),
-      VueI18nPlugin({
-        runtimeOnly: true,
-        compositionOnly: true,
-        fullInstall: true,
-        include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**'),
-      }),
+      // VueI18nPlugin({
+      //   runtimeOnly: true,
+      //   compositionOnly: true,
+      //   fullInstall: true,
+      //   include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**'),
+      // }),
     ],
     resolve: {
       alias: {
-        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
+        // 'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
       },
     },
     optimizeDeps: {
