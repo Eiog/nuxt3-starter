@@ -3,7 +3,8 @@ import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import { appDescription, appName } from './constants/index'
+import { appDescription } from './constants/index'
+import { pwa } from './pwa.config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -70,81 +71,7 @@ export default defineNuxtConfig({
       fallbackLocale: 'zh_cn',
     },
   },
-  pwa: {
-    registerType: 'autoUpdate',
-    manifest: {
-      name: appName,
-      short_name: appName,
-      description: appDescription,
-      theme_color: '#ffffff',
-      icons: [
-        {
-          src: 'pwa-192x192.png',
-          sizes: '192x192',
-          type: 'image/png',
-        },
-        {
-          src: 'pwa-512x512.png',
-          sizes: '512x512',
-          type: 'image/png',
-        },
-        {
-          src: 'pwa-512x512.png',
-          sizes: '512x512',
-          type: 'image/png',
-          purpose: 'any maskable',
-        },
-      ],
-    },
-    workbox: {
-      navigateFallback: '/',
-      navigateFallbackDenylist: [/^\/api\//],
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-      cleanupOutdatedCaches: true,
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/fonts.googleapis.com\/.*/i,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'google-fonts-cache',
-            expiration: {
-              maxEntries: 10,
-              maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          },
-        },
-        {
-          urlPattern: /^https:\/\/fonts.gstatic.com\/.*/i,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'gstatic-fonts-cache',
-            expiration: {
-              maxEntries: 10,
-              maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          },
-        },
-      ],
-    },
-    registerWebManifestInRouteRules: true,
-    writePlugin: true,
-    // client: {
-    //   installPrompt: true,
-    //   // you don't need to include this: only for testing purposes
-    //   // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
-    //   periodicSyncForUpdates: 20,
-    // },
-    devOptions: {
-      enabled: false,
-      type: 'module',
-    },
-  },
+  pwa,
   build: {
     transpile:
       process.env.NODE_ENV === 'production'
