@@ -56,6 +56,13 @@ export default defineNuxtConfig({
       toggleButtonVisibility: 'always',
     }],
   ],
+  experimental: {
+    // when using generate, payload js assets included in sw precache manifest
+    // but missing on offline, disabling extraction it until fixed
+    payloadExtraction: false,
+    inlineSSRStyles: false,
+    renderJsonPayloads: true,
+  },
   nitro: {
     esbuild: {
       options: {
@@ -82,6 +89,9 @@ export default defineNuxtConfig({
     },
   },
   pwa,
+  devtools: {
+    enable: true,
+  },
   build: {
     transpile:
       process.env.NODE_ENV === 'production'
