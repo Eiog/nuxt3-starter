@@ -6,6 +6,7 @@ const route = useRoute()
 
 <template>
   <div wfull hfull>
+    <VitePwaManifest />
     <NuxtLoadingIndicator />
     <naive-provider
       :theme="naiveThemeMode"
