@@ -2,12 +2,6 @@
 useHead({
   title: 'nuxt3-template',
 })
-
-onMounted(() => {
-  const meta = document.createElement('meta')
-  meta.name = 'naive-ui-style'
-  document.head.appendChild(meta)
-})
 </script>
 
 <template>
@@ -17,29 +11,27 @@ onMounted(() => {
 </template>
 
 <style>
-html,
-body,
-#__nuxt {
-  width: 100%;
-  height: 100%;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow: auto !important;
+  background:linear-gradient(to bottom,#d6dbdc,#FFFFFF);
+  color: #1a1a1a;
+}
 
-html.dark {
-  background: #222;
-  color: white;
+#__nuxt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.page-leave-active,
-.page-enter-active {
-  transition: all 0.3s ease-in-out;
-}
-.page-enter-from {
-  transform: scale(0.95);
-  opacity: 0;
-}
-.page-leave-to {
-  transform: scale(1.05);
-  opacity: 0;
+.dark html,.dark body{
+  background:linear-gradient(to bottom,#383838,#000000);
+  color: #dadada;
 }
 </style>

@@ -1,4 +1,14 @@
-export default defineComponent({
+---
+title: Tsx Demo
+---
+
+# Tsx Demo
+
+<ExampleHelloTsx/>
+
+```tsx
+// HelloTsx.tsx
+export const HelloTsx = defineComponent({
   name: 'HelloTsx',
   props: {
     value: {
@@ -30,3 +40,4 @@ export default defineComponent({
     )
   },
 })
+```

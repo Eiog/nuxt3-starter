@@ -49,3 +49,26 @@ declare module 'vue' {
     readonly useNotification: UnwrapRef<typeof import('naive-ui')['useNotification']>
   }
 }
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
+    readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
+    readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
+    readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
+    readonly getSatusColor: UnwrapRef<typeof import('../stores/helps')['getSatusColor']>
+    readonly mapActions: UnwrapRef<typeof import('pinia')['mapActions']>
+    readonly mapGetters: UnwrapRef<typeof import('pinia')['mapGetters']>
+    readonly mapState: UnwrapRef<typeof import('pinia')['mapState']>
+    readonly mapStores: UnwrapRef<typeof import('pinia')['mapStores']>
+    readonly mapWritableState: UnwrapRef<typeof import('pinia')['mapWritableState']>
+    readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
+    readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
+    readonly storeToRefs: UnwrapRef<typeof import('pinia')['storeToRefs']>
+    readonly useAppStore: UnwrapRef<typeof import('../stores/useAppStore')['useAppStore']>
+    readonly useDialog: UnwrapRef<typeof import('naive-ui')['useDialog']>
+    readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
+    readonly useLoadingBar: UnwrapRef<typeof import('naive-ui')['useLoadingBar']>
+    readonly useMessage: UnwrapRef<typeof import('naive-ui')['useMessage']>
+    readonly useNotification: UnwrapRef<typeof import('naive-ui')['useNotification']>
+  }
+}

@@ -1,15 +1,18 @@
 <script setup lang='ts'>
-// definePageMeta({
-//   title: '首页',
-// })
-const { data, pending } = await useFetch('/api/info')
+defineOptions({
+  name: 'IndexPage',
+})
+definePageMeta({
+  name: 'index-page',
+})
 </script>
 
 <template>
-  <div flex-col-center>
-    <Hello />
-    <HelloTsx />
-    {{ data }}{{ pending }}
+  <div class="flex-col-center gap-10">
+    <HelloWorld />
+    <Examples />
+    <Dependents />
+    <Info />
   </div>
 </template>
 

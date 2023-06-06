@@ -29,24 +29,28 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'naive-ui-style', content: '' },
       ],
 
     },
   },
   modules: [
     'nuxt-vitest',
-    // 'nuxt-icon',
-    // 'nuxt-icons',
-    // 'nuxt-security',
-    // 'nuxt-typed-router',
-    // '@nuxt/content',
+    'nuxt-mongoose',
+    'nuxt-icon',
+    'nuxt-icons',
+    // // 'nuxt-security',
+    // // 'nuxt-typed-router',
+    '@nuxt/content',
+    // '@nuxt/ui',
     '@nuxt/devtools',
     '@nuxtjs/color-mode',
     '@nuxtjs/robots',
-    '@intlify/nuxt3',
+    '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@unocss/nuxt',
+    // '@nuxthq/ui',
     '@vueuse/nuxt',
     ['unplugin-icons/nuxt', { compiler: 'vue3' }],
     '@vite-pwa/nuxt',
@@ -56,6 +60,12 @@ export default defineNuxtConfig({
       toggleButtonVisibility: 'always',
     }],
   ],
+  mongoose: {
+    uri: process.env.MONGODB_URI,
+    options: {},
+    modelsDir: 'models',
+    devtools: process.env.NODE_ENV === 'development',
+  },
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -73,20 +83,11 @@ export default defineNuxtConfig({
       routes: ['/', '/about'],
     },
   },
-  unocss: {
-    preflight: false,
-  },
   colorMode: {
     classSuffix: '',
   },
-  intlify: {
-    localeDir: 'locales',
-    vueI18n: {
-      // You can setting same `createI18n` options here !
-      locale: 'zh_cn',
-      legacy: false,
-      fallbackLocale: 'zh_cn',
-    },
+  i18n: {
+    vueI18n: './i18n.config.ts',
   },
   pwa,
   devtools: {
@@ -136,12 +137,6 @@ export default defineNuxtConfig({
         dts: 'typings/auto-import.d.ts',
         vueTemplate: true,
       }),
-      // VueI18nPlugin({
-      //   runtimeOnly: true,
-      //   compositionOnly: true,
-      //   fullInstall: true,
-      //   include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**'),
-      // }),
     ],
     resolve: {
       alias: {

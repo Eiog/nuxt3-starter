@@ -1,3 +1,3 @@
 {
-  "extends": ["@eiog","@nuxt/eslint-config"]
+  "extends": ["@eiog"]
 }

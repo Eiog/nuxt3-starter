@@ -1,6 +1,8 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'HelloWorld',
+})
 const { t } = useI18n()
-
 const urls = [
   {
     title: 'Vite2',
@@ -87,12 +89,7 @@ onMounted(() => {
         <span> 点我试试 </span>
       </n-popover>
     </div>
-    <div>
-      <SvgIcon name="home" />
-    </div>
-    <n-button type="primary">
-      dd
-    </n-button>
+    <div><SvgIcon name="home" /></div>
     <div text="center">
       <h1 text="3xl dark:gray-4">
         {{ t('welcome') }}
@@ -101,6 +98,9 @@ onMounted(() => {
         {{ t('hello') }}
       </h1>
     </div>
+    <n-button type="primary">
+      Primary
+    </n-button>
     <div flex-center flex="wrap" gap3>
       <a
         v-for="(item, index) in urls"

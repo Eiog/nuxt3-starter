@@ -127,7 +127,15 @@ function handleRemove(index: number) {
 
 <template>
   <div wfull>
-    <TransitionGroup relative flex="~ wrap" tag="div" name="fade">
+    <TransitionGroup
+      relative
+      h-60
+      overflow-y-auto
+      scrollbar
+      flex="~ wrap"
+      tag="div"
+      name="fade"
+    >
       <div
         key="add"
         w10
