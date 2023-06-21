@@ -137,6 +137,9 @@ devDependencies:
   nuxt-typed-router:
     specifier: ^3.2.3
     version: 3.2.3(rollup@2.79.1)
+  nuxt-viewport:
+    specifier: ^2.0.6
+    version: 2.0.6(rollup@2.79.1)(vue@3.3.4)
   nuxt-vitest:
     specifier: ^0.8.5
     version: 0.8.5(@vitejs/plugin-vue-jsx@3.0.1)(@vitejs/plugin-vue@4.2.3)(rollup@2.79.1)(vite@4.3.9)(vitest@0.32.2)(vue-router@4.2.2)(vue@3.3.4)
@@ -11982,6 +11985,19 @@ packages:
       - supports-color
     dev: true
 
+  /nuxt-viewport@2.0.6(rollup@2.79.1)(vue@3.3.4):
+    resolution: {integrity: sha512-U1V8RSLLbOzNkIWWmj9+sff7Txv6sVxifhnSW/6k9iaRwBeMp7+EyYBHbYzVd637lAIQqJ/8Ja9SZRvnbvATGQ==}
+    dependencies:
+      '@nuxt/kit': 3.5.3(rollup@2.79.1)
+      ua-parser-js: 1.0.35
+      vue-demi: 0.14.5(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - rollup
+      - supports-color
+      - vue
+    dev: true
+
   /nuxt-vitest@0.8.5(@vitejs/plugin-vue-jsx@3.0.1)(@vitejs/plugin-vue@4.2.3)(rollup@2.79.1)(vite@4.3.9)(vitest@0.32.2)(vue-router@4.2.2)(vue@3.3.4):
     resolution: {integrity: sha512-+KrPvQEIxZydjGyb/CNMPTcHuNssUehQK8Ng7lvFigD6GcAW6u/5wB2He8QiZ45NEfj1w4pTPbYkvOjdjhU8kw==}
     peerDependencies:
@@ -15471,6 +15487,10 @@ packages:
     resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}
     engines: {node: '>=14.17'}
     hasBin: true
+    dev: true
+
+  /ua-parser-js@1.0.35:
+    resolution: {integrity: sha512-fKnGuqmTBnIE+/KXSzCn4db8RTigUzw1AN0DmdU6hJovUTbYJKyqj+8Mt1c4VfRDnOVJnENmfYkIPZ946UrSAA==}
     dev: true
 
   /ufo@1.1.2:

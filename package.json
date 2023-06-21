@@ -19,7 +19,6 @@
     "commit": "git pull && git add -A && pnpm cz && git push",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "nuxi prepare && npx simple-git-hooks"
-
   },
   "devDependencies": {
     "@css-render/vue3-ssr": "^0.15.12",
@@ -66,6 +65,7 @@
     "nuxt-mongoose": "^0.0.8",
     "nuxt-security": "^0.13.1",
     "nuxt-typed-router": "^3.2.3",
+    "nuxt-viewport": "^2.0.6",
     "nuxt-vitest": "^0.8.5",
     "postcss-preset-env": "^8.5.0",
     "simple-git-hooks": "^2.8.1",
