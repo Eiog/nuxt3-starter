@@ -35,31 +35,29 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    'nuxt-vitest',
-    'nuxt-mongoose',
-    'nuxt-icon',
-    'nuxt-icons',
-    'nuxt-viewport',
+    'nuxt-vitest', // https://github.com/danielroe/nuxt-vitest
+    'nuxt-mongoose', // https://nuxt.com/modules/nuxt-mongoose
+    'nuxt-icon', // https://nuxt.com/modules/icon
+    'nuxt-icons', // https://nuxt.com/modules/icons
+    'nuxt-viewport', // https://nuxt.com/modules/nuxt-viewport
+    'nuxt-lazy-load', // https://gitlab.com/broj42/nuxt-lazy-load
     // // 'nuxt-security',
-    // // 'nuxt-typed-router',
-    '@nuxt/content',
-    // '@nuxt/ui',
-    '@nuxt/devtools',
-    '@nuxtjs/color-mode',
+    // // 'nuxt-typed-router', // https://nuxt.com/modules/typed-router
+    '@nuxt/content', // https://nuxt.com/modules/content
+    '@nuxt/devtools', // https://nuxt.com/modules/devtools
+    '@nuxtjs/color-mode', // https://nuxt.com/modules/color-mode
     '@nuxtjs/robots',
-    '@nuxtjs/i18n',
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    '@unocss/nuxt',
-    '@nuxthq/ui',
-    '@vueuse/nuxt',
-    ['unplugin-icons/nuxt', { compiler: 'vue3' }],
-    '@vite-pwa/nuxt',
-    '@morev/vue-transitions/nuxt',
-    ['unplugin-vue-inspector/nuxt', {
-      enabled: true,
-      toggleButtonVisibility: 'always',
-    }],
+    '@nuxtjs/i18n', // https://nuxt.com/modules/i18n
+    // '@nuxtjs/supabase', // https://nuxt.com/modules/supabase
+    '@pinia/nuxt', // https://nuxt.com/modules/pinia
+    '@pinia-plugin-persistedstate/nuxt', // https://nuxt.com/modules/pinia-plugin-persistedstate
+    '@unocss/nuxt', // https://nuxt.com/modules/unocss
+    '@nuxthq/ui', // https://nuxt.com/modules/nuxtlabs-ui
+    '@vueuse/nuxt', // https://nuxt.com/modules/vueuse
+    ['unplugin-icons/nuxt', { compiler: 'vue3' }], // https://github.com/antfu/unplugin-icons#configuration
+    '@vite-pwa/nuxt', // https://nuxt.com/modules/vite-pwa-nuxt
+    '@morev/vue-transitions/nuxt', // https://nuxt.com/modules/vue-transitions
+    ['unplugin-vue-inspector/nuxt', { enabled: true, toggleButtonVisibility: 'always' }], // https://github.com/webfansplz/vite-plugin-vue-inspector#example
   ],
   mongoose: {
     uri: process.env.MONGODB_URI,
