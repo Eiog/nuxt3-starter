@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt', // https://nuxt.com/modules/pinia
     '@pinia-plugin-persistedstate/nuxt', // https://nuxt.com/modules/pinia-plugin-persistedstate
     '@unocss/nuxt', // https://nuxt.com/modules/unocss
-    '@nuxthq/ui', // https://nuxt.com/modules/nuxtlabs-ui
+    '@nuxt/ui', // https://nuxt.com/modules/ui
     '@vueuse/nuxt', // https://nuxt.com/modules/vueuse
     ['unplugin-icons/nuxt', { compiler: 'vue3' }], // https://github.com/antfu/unplugin-icons#configuration
     '@vite-pwa/nuxt', // https://nuxt.com/modules/vite-pwa-nuxt
@@ -103,6 +103,9 @@ export default defineNuxtConfig({
           ]
         : ['@juggle/resize-observer'],
   },
+  css: [
+    '~/assets/style/index.less',
+  ],
   vite: {
     plugins: [
       createSvgIconsPlugin({

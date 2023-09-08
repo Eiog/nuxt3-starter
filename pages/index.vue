@@ -13,6 +13,17 @@ definePageMeta({
     <Examples />
     <Dependents />
     <Info />
+    <div class="flex-center gap-1">
+      <UButton v-use-track:exposure>
+        ExposureTrack
+      </UButton>
+      <UButton v-use-track:click>
+        ClickTrack
+      </UButton>
+      <UButton v-use-track:long-press>
+        LongPressTrack
+      </UButton>
+    </div>
   </div>
 </template>
 

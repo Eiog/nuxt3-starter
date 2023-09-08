@@ -25,7 +25,7 @@ html,body{
   color: #1a1a1a;
 }
 
-#__nuxt {
+#__nuxt,#nuxt-test {
   width: 100%;
   display: flex;
   flex-direction: column;
