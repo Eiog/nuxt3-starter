@@ -106,6 +106,11 @@ export default defineNuxtConfig({
   css: [
     '~/assets/style/index.less',
   ],
+  postcss: {
+    plugins: {
+      'postcss-preset-env': {},
+    },
+  },
   vite: {
     plugins: [
       createSvgIconsPlugin({
