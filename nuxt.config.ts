@@ -19,17 +19,17 @@ export default defineNuxtConfig({
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        {
-          rel: 'stylesheet',
-          type: 'text/css',
-          href: '/tailwind.css',
-        },
+        // {
+        //   rel: 'stylesheet',
+        //   type: 'text/css',
+        //   href: '/tailwind.css',
+        // },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-        { name: 'naive-ui-style', content: '' },
+        // { name: 'naive-ui-style', content: '' },
       ],
 
     },
@@ -58,6 +58,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt', // https://nuxt.com/modules/vite-pwa-nuxt
     '@morev/vue-transitions/nuxt', // https://nuxt.com/modules/vue-transitions
     ['unplugin-vue-inspector/nuxt', { enabled: true, toggleButtonVisibility: 'always' }], // https://github.com/webfansplz/vite-plugin-vue-inspector#example
+    '@bg-dev/nuxt-naiveui',
   ],
   mongoose: {
     uri: process.env.MONGODB_URI,
@@ -93,18 +94,19 @@ export default defineNuxtConfig({
     enable: true,
   },
   build: {
-    transpile:
-      process.env.NODE_ENV === 'production'
-        ? [
-            'naive-ui',
-            'vueuc',
-            '@css-render/vue3-ssr',
-            '@juggle/resize-observer',
-          ]
-        : ['@juggle/resize-observer'],
+    // transpile:
+    //   process.env.NODE_ENV === 'production'
+    //     ? [
+    //         'naive-ui',
+    //         'vueuc',
+    //         '@css-render/vue3-ssr',
+    //         '@juggle/resize-observer',
+    //       ]
+    //     : ['@juggle/resize-observer'],
   },
   css: [
     '~/assets/style/index.less',
+    '@unocss/reset/tailwind.css',
   ],
   postcss: {
     plugins: {
@@ -151,10 +153,10 @@ export default defineNuxtConfig({
       },
     },
     optimizeDeps: {
-      include:
-        process.env.NODE_ENV === 'development'
-          ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
-          : [],
+      // include:
+      //   process.env.NODE_ENV === 'development'
+      //     ? ['naive-ui', 'vueuc', 'date-fns-tz']
+      //     : [],
     },
   },
 })
