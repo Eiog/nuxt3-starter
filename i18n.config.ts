@@ -1,12 +1,12 @@
-import cn from './locales/zh_cn.json'
-import en from './locales/en_us.json'
+import cn from './locales/cn.json'
+import en from './locales/en.json'
 
 export default defineI18nConfig(() => ({
-  locale: 'en_us',
+  locale: 'cn',
   legacy: false,
-  fallbackLocale: 'en_us',
+  fallbackLocale: 'cn',
   messages: {
-    en_us: en,
-    zh_cn: cn,
+    en,
+    cn,
   },
 }))

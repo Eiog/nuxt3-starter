@@ -106,7 +106,7 @@ export default defineNuxtConfig({
   },
   css: [
     '~/assets/style/index.less',
-    '@unocss/reset/tailwind.css',
+    // '@unocss/reset/tailwind.css',
   ],
   postcss: {
     plugins: {
@@ -120,7 +120,6 @@ export default defineNuxtConfig({
         symbolId: 'icon-[dir]-[name]',
       }),
       Components({
-        dts: 'typings/components.d.ts',
         resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory
       }),
       AutoImport({
@@ -143,7 +142,6 @@ export default defineNuxtConfig({
           },
         ],
         dirs: ['stores'],
-        dts: 'typings/auto-import.d.ts',
         vueTemplate: true,
       }),
     ],

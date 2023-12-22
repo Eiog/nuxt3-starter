@@ -13,5 +13,3 @@ dist-ssr
 .output
 .nuxt
 .vercel
-typings/auto-import.d.ts
-typings/components.d.ts

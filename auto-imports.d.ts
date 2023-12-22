@@ -9,7 +9,7 @@ declare global {
   const createPinia: typeof import('pinia')['createPinia']
   const defineStore: typeof import('pinia')['defineStore']
   const getActivePinia: typeof import('pinia')['getActivePinia']
-  const getSatusColor: typeof import('../stores/helps')['getSatusColor']
+  const getSatusColor: typeof import('./stores/helps')['getSatusColor']
   const mapActions: typeof import('pinia')['mapActions']
   const mapGetters: typeof import('pinia')['mapGetters']
   const mapState: typeof import('pinia')['mapState']
@@ -18,7 +18,7 @@ declare global {
   const setActivePinia: typeof import('pinia')['setActivePinia']
   const setMapStoreSuffix: typeof import('pinia')['setMapStoreSuffix']
   const storeToRefs: typeof import('pinia')['storeToRefs']
-  const useAppStore: typeof import('../stores/useAppStore')['useAppStore']
+  const useAppStore: typeof import('./stores/useAppStore')['useAppStore']
   const useDialog: typeof import('naive-ui')['useDialog']
   const useI18n: typeof import('vue-i18n')['useI18n']
   const useLoadingBar: typeof import('naive-ui')['useLoadingBar']
@@ -33,7 +33,7 @@ declare module 'vue' {
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
     readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
-    readonly getSatusColor: UnwrapRef<typeof import('../stores/helps')['getSatusColor']>
+    readonly getSatusColor: UnwrapRef<typeof import('./stores/helps')['getSatusColor']>
     readonly mapActions: UnwrapRef<typeof import('pinia')['mapActions']>
     readonly mapGetters: UnwrapRef<typeof import('pinia')['mapGetters']>
     readonly mapState: UnwrapRef<typeof import('pinia')['mapState']>
@@ -42,7 +42,7 @@ declare module 'vue' {
     readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
     readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
     readonly storeToRefs: UnwrapRef<typeof import('pinia')['storeToRefs']>
-    readonly useAppStore: UnwrapRef<typeof import('../stores/useAppStore')['useAppStore']>
+    readonly useAppStore: UnwrapRef<typeof import('./stores/useAppStore')['useAppStore']>
     readonly useDialog: UnwrapRef<typeof import('naive-ui')['useDialog']>
     readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
     readonly useLoadingBar: UnwrapRef<typeof import('naive-ui')['useLoadingBar']>
@@ -56,7 +56,7 @@ declare module '@vue/runtime-core' {
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
     readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
-    readonly getSatusColor: UnwrapRef<typeof import('../stores/helps')['getSatusColor']>
+    readonly getSatusColor: UnwrapRef<typeof import('./stores/helps')['getSatusColor']>
     readonly mapActions: UnwrapRef<typeof import('pinia')['mapActions']>
     readonly mapGetters: UnwrapRef<typeof import('pinia')['mapGetters']>
     readonly mapState: UnwrapRef<typeof import('pinia')['mapState']>
@@ -65,7 +65,7 @@ declare module '@vue/runtime-core' {
     readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
     readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
     readonly storeToRefs: UnwrapRef<typeof import('pinia')['storeToRefs']>
-    readonly useAppStore: UnwrapRef<typeof import('../stores/useAppStore')['useAppStore']>
+    readonly useAppStore: UnwrapRef<typeof import('./stores/useAppStore')['useAppStore']>
     readonly useDialog: UnwrapRef<typeof import('naive-ui')['useDialog']>
     readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
     readonly useLoadingBar: UnwrapRef<typeof import('naive-ui')['useLoadingBar']>
