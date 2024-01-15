@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     ['unplugin-icons/nuxt', { compiler: 'vue3' }], // https://github.com/antfu/unplugin-icons#configuration
     '@vite-pwa/nuxt', // https://nuxt.com/modules/vite-pwa-nuxt
     '@morev/vue-transitions/nuxt', // https://nuxt.com/modules/vue-transitions
-    ['unplugin-vue-inspector/nuxt', { enabled: true, toggleButtonVisibility: 'always' }], // https://github.com/webfansplz/vite-plugin-vue-inspector#example
+    // ['unplugin-vue-inspector/nuxt', { enabled: true, toggleButtonVisibility: 'always' }], // https://github.com/webfansplz/vite-plugin-vue-inspector#example
     '@bg-dev/nuxt-naiveui',
   ],
   mongoose: {
@@ -69,9 +69,6 @@ export default defineNuxtConfig({
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
-    payloadExtraction: false,
-    inlineSSRStyles: false,
-    renderJsonPayloads: true,
   },
   nitro: {
     esbuild: {
@@ -90,9 +87,6 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts',
   },
   pwa,
-  devtools: {
-    enable: true,
-  },
   build: {
     // transpile:
     //   process.env.NODE_ENV === 'production'
