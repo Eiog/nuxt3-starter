@@ -1,4 +1,4 @@
-export default defineComponent({
+export const HelloTsx = defineComponent({
   name: 'HelloTsx',
   props: {
     value: {
@@ -7,7 +7,7 @@ export default defineComponent({
     },
   },
   emits: {
-    'update:value': (value: number) => true,
+    'update:value': (value?: number) => value,
   },
   setup(props, { emit }) {
     const inputValue = ref<number>(props.value ?? 0)
@@ -22,11 +22,11 @@ export default defineComponent({
   },
   render() {
     return (
-      <>
-        <button class="bg-black/10 p-x-8 p-y-2 rounded-md text-3xl active:bg-black/20" onClick={this.sub} >-</button>
-        <span class="text-3xl p-x-8 p-y-2">{this.inputValue}</span>
-        <button class="bg-black/10 p-x-8 p-y-2 rounded-md text-3xl active:bg-black/20" onClick={this.add} >+</button>
-      </>
+      <div>
+        <button class="rounded-md bg-black/10 p-x-8 p-y-2 text-3xl active:bg-black/20" onClick={this.sub}>-</button>
+        <span class="p-x-8 p-y-2 text-3xl">{this.inputValue}</span>
+        <button class="rounded-md bg-black/10 p-x-8 p-y-2 text-3xl active:bg-black/20" onClick={this.add}>+</button>
+      </div>
     )
   },
 })

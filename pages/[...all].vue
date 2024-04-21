@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <ContentDoc class="prose prose-sm m-auto text-left">
+    <ContentDoc class="prose-sm m-auto text-left prose">
       <template #not-found>
         <div>
           PageNotFound

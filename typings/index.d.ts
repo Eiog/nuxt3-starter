@@ -3,14 +3,14 @@ declare module '@nuxt/schema' {
     /** Theme configuration */
     theme?: {
       /** Primary app color */
-      primaryColor?: string;
-    };
+      primaryColor?: string
+    }
   }
 }
 declare module '#app' {
   interface PageMeta {
-    title?: string;
+    title?: string
   }
 }
 // It is always important to ensure you import/export something when augmenting a type
-export {};
+export {}

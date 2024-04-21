@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const props = withDefaults(defineProps<{ prefix?: string; name: string; color?: string; width?: number; height?: number }>(), {
+const props = withDefaults(defineProps<{ prefix?: string, name: string, color?: string, width?: number, height?: number }>(), {
   prefix: 'icon',
   color: '#333',
   width: 1,

@@ -17,11 +17,10 @@ import {
   zhCN,
 } from 'naive-ui'
 
-interface Props {
-  locale?: string
+const props = defineProps<{
+  locale?: 'cn' | 'en'
   dark?: boolean
-}
-const props = defineProps<Props>()
+}>()
 const theme = computed(() => props.dark ? darkTheme : undefined)
 const locale = computed(() => {
   switch (props.locale) {

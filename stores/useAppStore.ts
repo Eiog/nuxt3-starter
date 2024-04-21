@@ -54,7 +54,7 @@ export const useAppStore = defineStore(
         },
       }
     })
-    const { locale } = useI18n()
+    const { locale } = useNuxtApp().$i18n
     const language = ref<'cn' | 'en'>(locale.value as any)
     watch(language, language => (locale.value = language))
     const changeLanguage = (lang?: 'cn' | 'en') => {
@@ -71,7 +71,7 @@ export const useAppStore = defineStore(
       themeColor,
       naiveThemeMode,
       naiveThemeOverrides,
-      changeLanguage
+      changeLanguage,
     }
   },
   {

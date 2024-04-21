@@ -1,3 +1,5 @@
-export default defineNuxtRouteMiddleware((to, from) => {
-  console.log('from', from, 'to', to)
+/* eslint-disable no-console */
+export default defineNuxtRouteMiddleware(() => {
+  const { language } = storeToRefs(useAppStore())
+  console.log(language)
 })
