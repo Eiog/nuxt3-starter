@@ -24,6 +24,8 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
+        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
       ],
 
     },
@@ -36,7 +38,7 @@ export default defineNuxtConfig({
     'nuxt-viewport', // https://nuxt.com/modules/nuxt-viewport
     'nuxt-lazy-load', // https://gitlab.com/broj42/nuxt-lazy-load
     // // 'nuxt-security',
-    // // 'nuxt-typed-router', // https://nuxt.com/modules/typed-router
+    // 'nuxt-typed-router', // https://nuxt.com/modules/typed-router
     '@nuxt/content', // https://nuxt.com/modules/content
     '@nuxt/devtools', // https://nuxt.com/modules/devtools
     '@nuxtjs/color-mode', // https://nuxt.com/modules/color-mode
@@ -64,6 +66,9 @@ export default defineNuxtConfig({
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
+    payloadExtraction: false,
+    renderJsonPayloads: true,
+    typedPages: true,
   },
   nitro: {
     esbuild: {
@@ -72,6 +77,7 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
+      crawlLinks: false,
       routes: ['/', '/about'],
     },
   },
@@ -80,6 +86,13 @@ export default defineNuxtConfig({
   },
   i18n: {
     vueI18n: './config/i18n.config.ts',
+  },
+  devtools: {
+    enabled: true,
+  },
+  features: {
+    // For UnoCSS
+    inlineStyles: false,
   },
   eslint: {
     config: {

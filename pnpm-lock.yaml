@@ -11,9 +11,6 @@ devDependencies:
   '@bg-dev/nuxt-naiveui':
     specifier: ^1.13.0
     version: 1.13.0(rollup@4.16.0)(vue@3.4.23)
-  '@css-render/vue3-ssr':
-    specifier: ^0.15.12
-    version: 0.15.12(vue@3.4.23)
   '@eiog/ts-config':
     specifier: ^0.0.3
     version: 0.0.3
@@ -203,9 +200,6 @@ devDependencies:
   unplugin-vue-components:
     specifier: ^0.26.0
     version: 0.26.0(rollup@4.16.0)(vue@3.4.23)
-  unplugin-vue-inspector:
-    specifier: ^2.0.1
-    version: 2.0.1(vite@5.2.10)
   vfonts:
     specifier: ^0.0.3
     version: 0.0.3
@@ -17004,17 +16998,6 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-vue-inspector@2.0.1(vite@5.2.10):
-    resolution: {integrity: sha512-phAAj03Lfx4EBMBVDu+X3MfH3YyFtH7ySRhqK/eYFHTragGOwnsphKjIozcwtMNhjK4xHdguphWLVF9FcNbnTw==}
-    dependencies:
-      kolorist: 1.8.0
-      unplugin: 1.10.1
-      vite-plugin-vue-inspector: 5.0.1(vite@5.2.10)
-    transitivePeerDependencies:
-      - supports-color
-      - vite
-    dev: true
-
   /unplugin-vue-router@0.7.0(rollup@4.16.0)(vue-router@4.3.2)(vue@3.4.23):
     resolution: {integrity: sha512-ddRreGq0t5vlSB7OMy4e4cfU1w2AwBQCwmvW3oP/0IHQiokzbx4hd3TpwBu3eIAFVuhX2cwNQwp1U32UybTVCw==}
     peerDependencies:
@@ -17416,25 +17399,6 @@ packages:
 
   /vite-plugin-vue-inspector@4.0.2(vite@5.2.10):
     resolution: {integrity: sha512-KPvLEuafPG13T7JJuQbSm5PwSxKFnVS965+MP1we2xGw9BPkkc/+LPix5MMWenpKWqtjr0ws8THrR+KuoDC8hg==}
-    peerDependencies:
-      vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
-    dependencies:
-      '@babel/core': 7.24.4
-      '@babel/plugin-proposal-decorators': 7.24.1(@babel/core@7.24.4)
-      '@babel/plugin-syntax-import-attributes': 7.24.1(@babel/core@7.24.4)
-      '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.24.4)
-      '@babel/plugin-transform-typescript': 7.24.4(@babel/core@7.24.4)
-      '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.24.4)
-      '@vue/compiler-dom': 3.4.23
-      kolorist: 1.8.0
-      magic-string: 0.30.10
-      vite: 5.2.10(@types/node@20.12.7)(less@4.2.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /vite-plugin-vue-inspector@5.0.1(vite@5.2.10):
-    resolution: {integrity: sha512-R93P8iFa6BPODhc/aOtO04A8FFMMyFIfm8ZVSmN+8vU1TgwsHya734APGpX4fVHSPX2aVwYyiezXBUYQ0Opsqw==}
     peerDependencies:
       vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
     dependencies:
