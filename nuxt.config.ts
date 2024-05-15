@@ -3,16 +3,24 @@ import process from 'node:process'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import { appDescription } from './constants/index'
+import { webUpdateNotice } from '@plugin-web-update-notification/vite'
+import WebfontDownload from 'vite-plugin-webfont-dl'
+import VitePluginDebug from 'vite-plugin-debug'
+import ServerUrlCopy from 'vite-plugin-url-copy'
+
 import { pwa } from './config/pwa.config'
 import { VitePluginAutoImport } from './config'
+
+const { VITE_APP_DESCRIPTION } = process.env
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
+    pageTransition: { name: 'fade', mode: 'out-in' },
+    keepalive: true,
     head: {
       viewport: 'width=device-width,initial-scale=1',
       link: [
@@ -22,7 +30,7 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: appDescription },
+        { name: 'description', content: VITE_APP_DESCRIPTION },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
         { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
         { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
@@ -56,6 +64,18 @@ export default defineNuxtConfig({
     '@bg-dev/nuxt-naiveui',
     'notivue/nuxt',
     '@nuxt/eslint',
+    ['vite-plugin-version-mark/nuxt', {
+      // name: 'test-app',
+      // version: '0.0.1',
+      // command: 'git describe --tags',
+      // ifGitSHA: true,
+      ifShortSHA: true,
+      ifMeta: true,
+      ifLog: true,
+      ifGlobal: true,
+    }], // https://github.com/ZhongxuYang/vite-plugin-version-mark
+    'unplugin-info/nuxt', // https://github.com/yjl9903/unplugin-info
+    'unplugin-turbo-console/nuxt', // https://github.com/unplugin/unplugin-turbo-console
   ],
   mongoose: {
     uri: process.env.MONGODB_URI,
@@ -126,6 +146,22 @@ export default defineNuxtConfig({
       Components({
         resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory
       }),
+      webUpdateNotice({
+        logVersion: true,
+      }), // https://github.com/GreatAuk/plugin-web-update-notification
+      WebfontDownload(), // https://github.com/feat-agency/vite-plugin-webfont-dl
+      // viteVueCSSVars({
+      //   include: [/.vue/],
+      //   includeCompile: ['**/**.scss'],
+      //   server: false,
+      // }), // https://github.com/baiwusanyu-c/unplugin-vue-cssvars
+      VitePluginDebug(), // https://github.com/hu3dao/vite-plugin-debug/blob/master/README.zh-CN.md
+      ServerUrlCopy({
+        qrcode: {
+          disabled: false,
+          color: 'white',
+        },
+      }), // https://github.com/XioDone/vite-plugin-url-copy
       ...VitePluginAutoImport(),
     ],
     resolve: {

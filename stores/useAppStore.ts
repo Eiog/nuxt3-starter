@@ -1,82 +1,19 @@
 import { defineStore } from 'pinia'
-import type { Ref } from 'vue'
-import type { GlobalThemeOverrides } from 'naive-ui'
-import {
-  darkTheme,
-  useOsTheme,
-} from 'naive-ui'
-import { getSatusColor } from './helps'
 
 export const useAppStore = defineStore(
   'appStore',
   () => {
-    const darkMode = useDark()
-    const useOsDark = ref(false)
-    const useDarkMode = computed(() => {
-      if (useOsDark.value)
-        return useOsTheme().value === 'dark'
-      return darkMode.value
-    })
-    const themeColor = ref({
-      primary: '#64748B',
-      info: '#06b6d4',
-      success: '#10b981',
-      warning: '#fbbf24',
-      error: '#f43f5e',
-    })
-    const naiveThemeMode = computed(() => {
-      return darkMode.value ? darkTheme : undefined
-    })
-    const naiveThemeOverrides: Ref<GlobalThemeOverrides> = computed(() => {
-      return {
-        common: {
-          bodyColor: useDarkMode.value ? '#1f1f1f' : '#f5f5f5',
-          primaryColor: themeColor.value.primary,
-          primaryColorHover: getSatusColor(themeColor.value.primary).hover,
-          primaryColorPressed: getSatusColor(themeColor.value.primary).pressed,
-          primaryColorSuppl: getSatusColor(themeColor.value.primary).suppl,
-          infoColor: themeColor.value.info,
-          infoColorHover: getSatusColor(themeColor.value.info).hover,
-          infoColorPressed: getSatusColor(themeColor.value.info).pressed,
-          infoColorSuppl: getSatusColor(themeColor.value.info).suppl,
-          successColor: themeColor.value.success,
-          successColorHover: getSatusColor(themeColor.value.success).hover,
-          successColorPressed: getSatusColor(themeColor.value.success).pressed,
-          successColorSuppl: getSatusColor(themeColor.value.success).suppl,
-          warningColor: themeColor.value.warning,
-          warningColorHover: getSatusColor(themeColor.value.warning).hover,
-          warningColorPressed: getSatusColor(themeColor.value.warning).pressed,
-          warningColorSuppl: getSatusColor(themeColor.value.warning).suppl,
-          errorColor: themeColor.value.error,
-          errorColorHover: getSatusColor(themeColor.value.error).hover,
-          errorColorPressed: getSatusColor(themeColor.value.error).pressed,
-          errorColorSuppl: getSatusColor(themeColor.value.error).suppl,
-        },
-      }
-    })
-    const { locale } = useNuxtApp().$i18n
-    const language = ref<'cn' | 'en'>(locale.value as any)
-    watch(language, language => (locale.value = language))
-    const changeLanguage = (lang?: 'cn' | 'en') => {
-      if (lang)
-        language.value = lang
-      else
-        language.value = language.value === 'cn' ? 'en' : 'cn'
-    }
+    const { language, toggleLanguage } = useLanguage()
+    const { useDarkMode } = useNaiveTheme()
     return {
       language,
-      darkMode,
-      useOsDark,
+      toggleLanguage,
       useDarkMode,
-      themeColor,
-      naiveThemeMode,
-      naiveThemeOverrides,
-      changeLanguage,
     }
   },
   {
     persist: {
-      key: '__app__',
+      key: '__APP_STORE_PERSIST__',
       paths: [''],
     },
   },

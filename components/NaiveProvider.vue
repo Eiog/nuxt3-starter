@@ -6,42 +6,14 @@ import {
   NLoadingBarProvider,
   NMessageProvider,
   NNotificationProvider,
-  darkTheme,
-  dateEnUS,
-  dateZhCN,
-  enUS,
   useDialog,
   useLoadingBar,
   useMessage,
   useNotification,
-  zhCN,
 } from 'naive-ui'
 
-const props = defineProps<{
-  locale?: 'cn' | 'en'
-  dark?: boolean
-}>()
-const theme = computed(() => props.dark ? darkTheme : undefined)
-const locale = computed(() => {
-  switch (props.locale) {
-    case 'en':
-      return enUS
-    case 'cn':
-      return zhCN
-    default:
-      return undefined
-  }
-})
-const dateLocale = computed(() => {
-  switch (props.locale) {
-    case 'en':
-      return dateEnUS
-    case 'cn':
-      return dateZhCN
-    default:
-      return undefined
-  }
-})
+const { theme, locale, dateLocale } = useNaiveTheme()
+
 // 挂载naive组件的方法至window, 以便在路由钩子函数和请求函数里面调用
 function registerNaiveTools() {
   window.$loadingBar = useLoadingBar()

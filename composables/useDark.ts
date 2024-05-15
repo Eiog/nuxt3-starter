@@ -4,7 +4,6 @@ export const preferredDark = usePreferredDark()
 
 const isAppearanceTransition
   = typeof document !== 'undefined'
-  // @ts-expect-error: Transition API
   && document.startViewTransition
   && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 

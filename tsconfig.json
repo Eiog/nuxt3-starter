@@ -3,11 +3,11 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "Bundler",
     "types": [
       "unplugin-icons/types/vue",
       "naive-ui/volar",
-      "vitest/globals",
-      "vite-plugin-svg-icons/client"
+      "vitest/globals"
     ]
   }
 }

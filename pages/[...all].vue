@@ -1,15 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <ContentDoc class="prose-sm m-auto text-left prose">
-      <template #not-found>
-        <div>
-          PageNotFound
-        </div>
-      </template>
-    </ContentDoc>
-  </div>
+  <h1>Page Not Found</h1>
 </template>
 
 <style scoped lang="less"></style>

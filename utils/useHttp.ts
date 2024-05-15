@@ -31,8 +31,6 @@ axiosInstance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     // TODO 在这里可以加上想要在请求发送前处理的逻辑
     // TODO 比如 loading 等
-    // if (!NProgress.isStarted())
-    //   NProgress.start()
     return config
   },
   (error: AxiosError) => {
@@ -43,14 +41,12 @@ axiosInstance.interceptors.request.use(
 // 响应拦截器
 axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => {
-    // NProgress.done()
     if (response.status === 200)
       return response.data
 
     return Promise.reject(response.data)
   },
   (error: AxiosError<{ msg: string }>) => {
-    // NProgress.done()
     const { response, request } = error
     if (response) {
       const code = response.status
