@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { useRequest } from 'vue-hooks-plus'
+import useRequest from 'vue-hooks-plus/es/useRequest'
 
 defineOptions({
   name: 'IndexPage',

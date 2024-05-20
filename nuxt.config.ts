@@ -6,7 +6,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { webUpdateNotice } from '@plugin-web-update-notification/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 import VitePluginDebug from 'vite-plugin-debug'
-import ServerUrlCopy from 'vite-plugin-url-copy'
 
 import { pwa } from './config/pwa.config'
 import { VitePluginAutoImport } from './config'
@@ -76,6 +75,7 @@ export default defineNuxtConfig({
     }], // https://github.com/ZhongxuYang/vite-plugin-version-mark
     'unplugin-info/nuxt', // https://github.com/yjl9903/unplugin-info
     'unplugin-turbo-console/nuxt', // https://github.com/unplugin/unplugin-turbo-console
+    'unplugin-info/nuxt', // https://github.com/yjl9903/unplugin-info
   ],
   mongoose: {
     uri: process.env.MONGODB_URI,
@@ -156,12 +156,6 @@ export default defineNuxtConfig({
       //   server: false,
       // }), // https://github.com/baiwusanyu-c/unplugin-vue-cssvars
       VitePluginDebug(), // https://github.com/hu3dao/vite-plugin-debug/blob/master/README.zh-CN.md
-      ServerUrlCopy({
-        qrcode: {
-          disabled: false,
-          color: 'white',
-        },
-      }), // https://github.com/XioDone/vite-plugin-url-copy
       ...VitePluginAutoImport(),
     ],
     resolve: {

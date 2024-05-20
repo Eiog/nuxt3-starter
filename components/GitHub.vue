@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <a class="flex items-center justify-center gap-1 text-xl" href="https://github.com/Eiog/vue3-starter-simple" target="_blank" rel="noopener noreferrer">
+  <a class="flex items-center justify-center gap-1 text-xl" href="https://github.com/Eiog/nuxt3-starter" target="_blank" rel="noopener noreferrer">
     <i class="i-ri-github-fill" />
   </a>
 </template>

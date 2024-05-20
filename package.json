@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@8.6.3",
   "scripts": {
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --host",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
     "build": "nuxi build",
     "lint": "eslint .",
@@ -99,7 +99,6 @@
     "vfonts": "^0.0.3",
     "vite-plugin-debug": "^1.0.1",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vite-plugin-url-copy": "^1.1.4",
     "vite-plugin-version-mark": "^0.0.13",
     "vite-plugin-webfont-dl": "^3.9.4",
     "vitest": "^1.6.0",

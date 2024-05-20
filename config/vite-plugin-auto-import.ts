@@ -11,6 +11,7 @@ export function VitePluginAutoImport(): PluginOption[] {
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.vue$/,
         /\.vue\?vue/, // .vue
+        /\.md$/,
       ],
       imports: [
         'vue',

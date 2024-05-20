@@ -233,9 +233,6 @@ devDependencies:
   vite-plugin-svg-icons:
     specifier: ^2.0.1
     version: 2.0.1(vite@5.2.11)
-  vite-plugin-url-copy:
-    specifier: ^1.1.4
-    version: 1.1.4(vite@5.2.11)
   vite-plugin-version-mark:
     specifier: ^0.0.13
     version: 0.0.13
@@ -18019,17 +18016,6 @@ packages:
       vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vite-plugin-url-copy@1.1.4(vite@5.2.11):
-    resolution: {integrity: sha512-LuNI0RHdg3gfbyIiY4yzJaIxhq2fAapUTV31eskHIV56CxioddReH+H+bZtRkEdcgr3XkFBdetUVRzBSJjNEyg==}
-    peerDependencies:
-      vite: '>=4.0.0'
-    dependencies:
-      clipboardy: 4.0.0
-      consola: 3.2.3
-      uqr: 0.1.2
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
     dev: true
 
   /vite-plugin-version-mark@0.0.13:
