@@ -1,0 +1,34 @@
+.fade-move,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  transform: scale(0.99);
+  opacity: 0;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-left-enter-from {
+  transform: translate(50%, 0);
+  opacity: 0;
+}
+.slide-left-leave-to {
+  transform: translate(20%, 0);
+  opacity: 0;
+}
+
+.slide-right-enter-from {
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+.slide-right-leave-to {
+  transform: translate(-20%, 0);
+  opacity: 0;
+}

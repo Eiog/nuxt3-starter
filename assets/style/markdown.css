@@ -4,31 +4,28 @@
 
 .prose .shiki {
   font-family: 'DM Mono', monospace;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.4;
-  overflow: auto;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 20px 0;
+  padding:10px;
+  margin:5px 0;
+  border-radius: 8px;
+  position: relative;
 }
 
 .prose img {
   width: 100%;
 }
 
-.shiki-light {
-  background: #f8f8f8 !important;
-}
-.shiki-dark {
-  background: #0e0e0e !important;
-}
-
-html.dark .shiki-light {
-  display: none;
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+  background: var(--shiki-light-bg);
 }
 
-html:not(.dark) .shiki-dark {
-  display: none;
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark);
+  background: var(--shiki-dark-bg);
 }
 .prose h1,h2,h3,h4,h5,h6 {
   display: block;

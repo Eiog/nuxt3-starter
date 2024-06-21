@@ -46,6 +46,8 @@ export default defineNuxtConfig({
     'nuxt-lazy-load', // https://gitlab.com/broj42/nuxt-lazy-load
     // // 'nuxt-security',
     // 'nuxt-typed-router', // https://nuxt.com/modules/typed-router
+    // 'nuxt-shiki', // https://github.com/pi0/nuxt-shiki
+    'nuxt-content-twoslash', // https://github.com/antfu/nuxt-content-twoslash
     '@nuxt/content', // https://nuxt.com/modules/content
     '@nuxt/devtools', // https://nuxt.com/modules/devtools
     '@nuxtjs/color-mode', // https://nuxt.com/modules/color-mode
@@ -82,6 +84,14 @@ export default defineNuxtConfig({
     options: {},
     modelsDir: 'models',
     devtools: process.env.NODE_ENV === 'development',
+  },
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+    },
   },
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
